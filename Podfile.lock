@@ -1,0 +1,16 @@
+PODS:
+  - AMScrollingNavbar (1.0.1)
+  - iToast (0.0.1)
+  - VCTransitionsLibrary (1.4.0)
+
+DEPENDENCIES:
+  - AMScrollingNavbar (~> 1.0)
+  - iToast
+  - VCTransitionsLibrary (~> 1.4.0)
+
+SPEC CHECKSUMS:
+  AMScrollingNavbar: ff4d5a72b463eb03c764e91ac21312407d3bf6c6
+  iToast: 4de112d3dd42a3a8bf685572e6cda723c9cbc4f2
+  VCTransitionsLibrary: 0624c9163552cf5ded57f80f6285e20fa2863607
+
+COCOAPODS: 0.33.1

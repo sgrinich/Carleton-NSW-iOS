@@ -1,0 +1,898 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0142DB5D537E4EFB840C702F /* CEFlipAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E2545D957E6A45C8BE948F81 /* CEFlipAnimationController.h */; };
+		023A0D7A151F4241BA6CDF03 /* Pods-iToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE7499641EC4A9F945DB450 /* Pods-iToast-dummy.m */; };
+		0AE50045E26E406E936EB5FF /* CEReversibleAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 75C72C4C9D924D4A85CD3402 /* CEReversibleAnimationController.h */; };
+		1055F9DACA2C49809641A4A3 /* CEFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D731F885D80457CAAC62251 /* CEFoldAnimationController.m */; };
+		1EA58E819D634217AC1E13BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA193BEA80FC485FB31D2F04 /* Foundation.framework */; };
+		1ECE2DE856DE4A5197A5745A /* CEVerticalSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CAEECCBA394D328AD326B7 /* CEVerticalSwipeInteractionController.m */; };
+		25D0E2D0361D40C4A9CA5926 /* CEFlipAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F81DEBEB58234899A4D6A5E2 /* CEFlipAnimationController.m */; };
+		2A119AD48D334877A6C0A192 /* CEVerticalSwipeInteractionController.h in Headers */ = {isa = PBXBuildFile; fileRef = C9C88427672E4F3784E20BF3 /* CEVerticalSwipeInteractionController.h */; };
+		3ACE01D32DA6408099188652 /* CEReversibleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19F669ED3124CAC84E89C57 /* CEReversibleAnimationController.m */; };
+		3B78BDE2EC434FC982650D36 /* libPods-VCTransitionsLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A662BE32314016811B31A3 /* libPods-VCTransitionsLibrary.a */; };
+		514C66C5228A4C3EAF1A8568 /* CEPortalAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 161169457BCF424ABFB52F31 /* CEPortalAnimationController.h */; };
+		52BE6EFDE33248D8A555D0E7 /* UIViewController+ScrollingNavbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 70DE445DB87B49E7BAA494B3 /* UIViewController+ScrollingNavbar.h */; };
+		63C0CE5E7F224BCD820C6C1C /* CETurnAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C1367FEFA20942B5A087021F /* CETurnAnimationController.h */; };
+		69A0E49F369445F78C7DC2DE /* iToast.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB08925537142E6B5C9048E /* iToast.h */; };
+		7A26DB95714F4BC696EAD829 /* CETurnAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 621196CE65354AE1B6E34601 /* CETurnAnimationController.m */; };
+		8073EEE5F81D424BA57E833E /* CEBaseInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9BBB35338B4099964254A5 /* CEBaseInteractionController.m */; };
+		83F199BC899D453DA68B05F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA193BEA80FC485FB31D2F04 /* Foundation.framework */; };
+		9791E7F57CA54CC7A129CB39 /* CECrossfadeAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 94ACF3A495F646508F1733F4 /* CECrossfadeAnimationController.h */; };
+		A3D289E2A5F349AB99B06648 /* Pods-VCTransitionsLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DEED19E9D6426FABF2E245 /* Pods-VCTransitionsLibrary-dummy.m */; };
+		A42DC7B78C9E45EC86153045 /* CEHorizontalSwipeInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A53811F8F74AA0B9EFAA90 /* CEHorizontalSwipeInteractionController.m */; };
+		A8E7CBCA4FFA4C3999C4B8C8 /* CEBaseInteractionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B5D741A335F44CEAA80CDBC /* CEBaseInteractionController.h */; };
+		ACB0320A647C430AAB9244A8 /* CEHorizontalSwipeInteractionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 52078358AEEB438D8BD9F4C7 /* CEHorizontalSwipeInteractionController.h */; };
+		B35F326180A04229B6FC2D6C /* CEExplodeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C856A5AB754F0A8C9BF18A /* CEExplodeAnimationController.m */; };
+		B9EC312A96FB4AB49092821D /* libPods-iToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8BBCB8D0782463BAAC2AE03 /* libPods-iToast.a */; };
+		BA5588EDB0C44AD98C8F010E /* CEPinchInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8F4A48B0D14CD390D1C32A /* CEPinchInteractionController.m */; };
+		BF359077868C4101BFCD3793 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4D76FC969B4000A3163F60 /* Pods-dummy.m */; };
+		C58389A1E81D4165852836E0 /* CECubeAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A17D44BEFBB416793C6F9FF /* CECubeAnimationController.h */; };
+		CA648E36E3294086BBC8E3D8 /* Pods-AMScrollingNavbar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B46F596DDFDF47F999684B40 /* Pods-AMScrollingNavbar-dummy.m */; };
+		CFD56477CDE545C9B307444A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA193BEA80FC485FB31D2F04 /* Foundation.framework */; };
+		D2AB8E6F1C7E424EA72A95AA /* CECardsAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2510CC1B428443958B7D19AB /* CECardsAnimationController.h */; };
+		D6971D4A8AB2414690C880C6 /* CEFoldAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 77017EF70268433CB1C78E62 /* CEFoldAnimationController.h */; };
+		D8FCD455A43F41FCA084FF1B /* CENatGeoAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959C4849BDC4D42B1FE352A /* CENatGeoAnimationController.m */; };
+		E2D7CFC382CC4A9F801BE2FC /* CEExplodeAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD421D8AD26C47EF8E1A17E4 /* CEExplodeAnimationController.h */; };
+		E62D1D8BEBB84F7694E897DF /* CECrossfadeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 428EE467169A4F85BE96DC13 /* CECrossfadeAnimationController.m */; };
+		EA39D3C75D4F449AB8168011 /* CECubeAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE888DBE76B4CFFA97DF81C /* CECubeAnimationController.m */; };
+		ED7D2BC2E6C14420825C4734 /* CEPortalAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6873E4CD02D40C9BBBB2A13 /* CEPortalAnimationController.m */; };
+		F2DD537EFCD54340BE28EE1E /* CENatGeoAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E45EF22E767461DBADAEE71 /* CENatGeoAnimationController.h */; };
+		F46EFA0D4E724F349FCB0F84 /* libPods-AMScrollingNavbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE7DA9A02B34986B7F01DF2 /* libPods-AMScrollingNavbar.a */; };
+		F482A18ADDDE4DAEB08789C3 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B70BF238107942669329E266 /* iToast.m */; };
+		F6DC6055B08E4F1CB8B9A174 /* UIViewController+ScrollingNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0065FBBA03433C8988CF92 /* UIViewController+ScrollingNavbar.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		F7416D3B4A7D45E88A1DD708 /* CECardsAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26CDDE486C462D9069403B /* CECardsAnimationController.m */; };
+		FA363DC176CB4AD7A26511E7 /* CEPinchInteractionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8636E3AB8B0F48F19E1B3CF6 /* CEPinchInteractionController.h */; };
+		FDF052DF015D4DB999E09C3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA193BEA80FC485FB31D2F04 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E29D7473D6E486F919C460E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE6215A2A34322B648E112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5579812B289F457D872610E8;
+			remoteInfo = "Pods-iToast";
+		};
+		2308260CB75A4407BD314267 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE6215A2A34322B648E112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 939373831A424E59901A681B;
+			remoteInfo = "Pods-VCTransitionsLibrary";
+		};
+		4359D85EE2544E8C957F5B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07DE6215A2A34322B648E112 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A6B6B70221446BA826D7C5D;
+			remoteInfo = "Pods-AMScrollingNavbar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E45EF22E767461DBADAEE71 /* CENatGeoAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CENatGeoAnimationController.h; path = AnimationControllers/CENatGeoAnimationController.h; sourceTree = "<group>"; };
+		15730AE2146A4ECEBB326AA8 /* Pods-iToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iToast-prefix.pch"; sourceTree = "<group>"; };
+		161169457BCF424ABFB52F31 /* CEPortalAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEPortalAnimationController.h; path = AnimationControllers/CEPortalAnimationController.h; sourceTree = "<group>"; };
+		1A17D44BEFBB416793C6F9FF /* CECubeAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CECubeAnimationController.h; path = AnimationControllers/CECubeAnimationController.h; sourceTree = "<group>"; };
+		1B5D741A335F44CEAA80CDBC /* CEBaseInteractionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEBaseInteractionController.h; path = InteractionControllers/CEBaseInteractionController.h; sourceTree = "<group>"; };
+		1D731F885D80457CAAC62251 /* CEFoldAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEFoldAnimationController.m; path = AnimationControllers/CEFoldAnimationController.m; sourceTree = "<group>"; };
+		2510CC1B428443958B7D19AB /* CECardsAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CECardsAnimationController.h; path = AnimationControllers/CECardsAnimationController.h; sourceTree = "<group>"; };
+		2E8F4A48B0D14CD390D1C32A /* CEPinchInteractionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEPinchInteractionController.m; path = InteractionControllers/CEPinchInteractionController.m; sourceTree = "<group>"; };
+		3F26CDDE486C462D9069403B /* CECardsAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CECardsAnimationController.m; path = AnimationControllers/CECardsAnimationController.m; sourceTree = "<group>"; };
+		428EE467169A4F85BE96DC13 /* CECrossfadeAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CECrossfadeAnimationController.m; path = AnimationControllers/CECrossfadeAnimationController.m; sourceTree = "<group>"; };
+		4C9BBB35338B4099964254A5 /* CEBaseInteractionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEBaseInteractionController.m; path = InteractionControllers/CEBaseInteractionController.m; sourceTree = "<group>"; };
+		50E6126779D0414DA960FA98 /* Pods-AMScrollingNavbar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMScrollingNavbar-Private.xcconfig"; sourceTree = "<group>"; };
+		52078358AEEB438D8BD9F4C7 /* CEHorizontalSwipeInteractionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEHorizontalSwipeInteractionController.h; path = InteractionControllers/CEHorizontalSwipeInteractionController.h; sourceTree = "<group>"; };
+		52F74BFDD091462389705736 /* Pods-VCTransitionsLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VCTransitionsLibrary-prefix.pch"; sourceTree = "<group>"; };
+		5BE7DA9A02B34986B7F01DF2 /* libPods-AMScrollingNavbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMScrollingNavbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE888DBE76B4CFFA97DF81C /* CECubeAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CECubeAnimationController.m; path = AnimationControllers/CECubeAnimationController.m; sourceTree = "<group>"; };
+		621196CE65354AE1B6E34601 /* CETurnAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CETurnAnimationController.m; path = AnimationControllers/CETurnAnimationController.m; sourceTree = "<group>"; };
+		62883C0440664D03A9B62F6F /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		70DE445DB87B49E7BAA494B3 /* UIViewController+ScrollingNavbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ScrollingNavbar.h"; path = "AMScrollingNavbar/UIViewController+ScrollingNavbar.h"; sourceTree = "<group>"; };
+		75C72C4C9D924D4A85CD3402 /* CEReversibleAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEReversibleAnimationController.h; path = AnimationControllers/CEReversibleAnimationController.h; sourceTree = "<group>"; };
+		77017EF70268433CB1C78E62 /* CEFoldAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEFoldAnimationController.h; path = AnimationControllers/CEFoldAnimationController.h; sourceTree = "<group>"; };
+		7D8E8AF006E74A408F321119 /* Pods-VCTransitionsLibrary-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCTransitionsLibrary-Private.xcconfig"; sourceTree = "<group>"; };
+		83CAEECCBA394D328AD326B7 /* CEVerticalSwipeInteractionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEVerticalSwipeInteractionController.m; path = InteractionControllers/CEVerticalSwipeInteractionController.m; sourceTree = "<group>"; };
+		84F645455B97440E8230BC19 /* Pods-iToast-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iToast-Private.xcconfig"; sourceTree = "<group>"; };
+		8636E3AB8B0F48F19E1B3CF6 /* CEPinchInteractionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEPinchInteractionController.h; path = InteractionControllers/CEPinchInteractionController.h; sourceTree = "<group>"; };
+		8959C4849BDC4D42B1FE352A /* CENatGeoAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CENatGeoAnimationController.m; path = AnimationControllers/CENatGeoAnimationController.m; sourceTree = "<group>"; };
+		898DA9F654724C948E5336A7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		8B5C46397F7848D0817C5F83 /* Pods-iToast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iToast.xcconfig"; sourceTree = "<group>"; };
+		8E67128FAC284B33927398C4 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		94ACF3A495F646508F1733F4 /* CECrossfadeAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CECrossfadeAnimationController.h; path = AnimationControllers/CECrossfadeAnimationController.h; sourceTree = "<group>"; };
+		9A9E0AB98CA3428B92DC41CC /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0EDDDC83B5B46F7B53F2561 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A34BFC4715EF471EA31CD52A /* Pods-VCTransitionsLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VCTransitionsLibrary.xcconfig"; sourceTree = "<group>"; };
+		A4C856A5AB754F0A8C9BF18A /* CEExplodeAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEExplodeAnimationController.m; path = AnimationControllers/CEExplodeAnimationController.m; sourceTree = "<group>"; };
+		A8BBCB8D0782463BAAC2AE03 /* libPods-iToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iToast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A925E7BA35A14D69A4899990 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4D76FC969B4000A3163F60 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		B46F596DDFDF47F999684B40 /* Pods-AMScrollingNavbar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AMScrollingNavbar-dummy.m"; sourceTree = "<group>"; };
+		B70BF238107942669329E266 /* iToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		B7A53811F8F74AA0B9EFAA90 /* CEHorizontalSwipeInteractionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEHorizontalSwipeInteractionController.m; path = InteractionControllers/CEHorizontalSwipeInteractionController.m; sourceTree = "<group>"; };
+		BBE7499641EC4A9F945DB450 /* Pods-iToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iToast-dummy.m"; sourceTree = "<group>"; };
+		C1367FEFA20942B5A087021F /* CETurnAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CETurnAnimationController.h; path = AnimationControllers/CETurnAnimationController.h; sourceTree = "<group>"; };
+		C19F669ED3124CAC84E89C57 /* CEReversibleAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEReversibleAnimationController.m; path = AnimationControllers/CEReversibleAnimationController.m; sourceTree = "<group>"; };
+		C9C88427672E4F3784E20BF3 /* CEVerticalSwipeInteractionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEVerticalSwipeInteractionController.h; path = InteractionControllers/CEVerticalSwipeInteractionController.h; sourceTree = "<group>"; };
+		CBC1F2F108024DE7AFEC3ACC /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		CF44A60FC1524B6AB8A3D5AF /* Pods-AMScrollingNavbar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMScrollingNavbar.xcconfig"; sourceTree = "<group>"; };
+		D6873E4CD02D40C9BBBB2A13 /* CEPortalAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEPortalAnimationController.m; path = AnimationControllers/CEPortalAnimationController.m; sourceTree = "<group>"; };
+		DA193BEA80FC485FB31D2F04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DD421D8AD26C47EF8E1A17E4 /* CEExplodeAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEExplodeAnimationController.h; path = AnimationControllers/CEExplodeAnimationController.h; sourceTree = "<group>"; };
+		DDB08925537142E6B5C9048E /* iToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		E2545D957E6A45C8BE948F81 /* CEFlipAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CEFlipAnimationController.h; path = AnimationControllers/CEFlipAnimationController.h; sourceTree = "<group>"; };
+		E35D1683EAF043E5B93DCFBB /* Pods-AMScrollingNavbar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AMScrollingNavbar-prefix.pch"; sourceTree = "<group>"; };
+		F3DEED19E9D6426FABF2E245 /* Pods-VCTransitionsLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VCTransitionsLibrary-dummy.m"; sourceTree = "<group>"; };
+		F81DEBEB58234899A4D6A5E2 /* CEFlipAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CEFlipAnimationController.m; path = AnimationControllers/CEFlipAnimationController.m; sourceTree = "<group>"; };
+		F8A662BE32314016811B31A3 /* libPods-VCTransitionsLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCTransitionsLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0065FBBA03433C8988CF92 /* UIViewController+ScrollingNavbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ScrollingNavbar.m"; path = "AMScrollingNavbar/UIViewController+ScrollingNavbar.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528D5C6FC6E84A37845CD5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD56477CDE545C9B307444A /* Foundation.framework in Frameworks */,
+				F46EFA0D4E724F349FCB0F84 /* libPods-AMScrollingNavbar.a in Frameworks */,
+				3B78BDE2EC434FC982650D36 /* libPods-VCTransitionsLibrary.a in Frameworks */,
+				B9EC312A96FB4AB49092821D /* libPods-iToast.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA3F14B4B1C4082881B3F1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF052DF015D4DB999E09C3B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CB478CA7E44F31AC32B90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA58E819D634217AC1E13BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A3FA04B8FA423FBD9DA5AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F199BC899D453DA68B05F5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		119E6EC5AE7A41E4807FD045 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F44EBFF2D7324491B5B07D05 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19F468B56D4B48F39ABF1AE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A925E7BA35A14D69A4899990 /* libPods.a */,
+				5BE7DA9A02B34986B7F01DF2 /* libPods-AMScrollingNavbar.a */,
+				F8A662BE32314016811B31A3 /* libPods-VCTransitionsLibrary.a */,
+				A8BBCB8D0782463BAAC2AE03 /* libPods-iToast.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2839F14838EF41DD99563229 /* VCTransitionsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				1B5D741A335F44CEAA80CDBC /* CEBaseInteractionController.h */,
+				4C9BBB35338B4099964254A5 /* CEBaseInteractionController.m */,
+				2510CC1B428443958B7D19AB /* CECardsAnimationController.h */,
+				3F26CDDE486C462D9069403B /* CECardsAnimationController.m */,
+				94ACF3A495F646508F1733F4 /* CECrossfadeAnimationController.h */,
+				428EE467169A4F85BE96DC13 /* CECrossfadeAnimationController.m */,
+				1A17D44BEFBB416793C6F9FF /* CECubeAnimationController.h */,
+				5BE888DBE76B4CFFA97DF81C /* CECubeAnimationController.m */,
+				DD421D8AD26C47EF8E1A17E4 /* CEExplodeAnimationController.h */,
+				A4C856A5AB754F0A8C9BF18A /* CEExplodeAnimationController.m */,
+				E2545D957E6A45C8BE948F81 /* CEFlipAnimationController.h */,
+				F81DEBEB58234899A4D6A5E2 /* CEFlipAnimationController.m */,
+				77017EF70268433CB1C78E62 /* CEFoldAnimationController.h */,
+				1D731F885D80457CAAC62251 /* CEFoldAnimationController.m */,
+				52078358AEEB438D8BD9F4C7 /* CEHorizontalSwipeInteractionController.h */,
+				B7A53811F8F74AA0B9EFAA90 /* CEHorizontalSwipeInteractionController.m */,
+				0E45EF22E767461DBADAEE71 /* CENatGeoAnimationController.h */,
+				8959C4849BDC4D42B1FE352A /* CENatGeoAnimationController.m */,
+				8636E3AB8B0F48F19E1B3CF6 /* CEPinchInteractionController.h */,
+				2E8F4A48B0D14CD390D1C32A /* CEPinchInteractionController.m */,
+				161169457BCF424ABFB52F31 /* CEPortalAnimationController.h */,
+				D6873E4CD02D40C9BBBB2A13 /* CEPortalAnimationController.m */,
+				75C72C4C9D924D4A85CD3402 /* CEReversibleAnimationController.h */,
+				C19F669ED3124CAC84E89C57 /* CEReversibleAnimationController.m */,
+				C1367FEFA20942B5A087021F /* CETurnAnimationController.h */,
+				621196CE65354AE1B6E34601 /* CETurnAnimationController.m */,
+				C9C88427672E4F3784E20BF3 /* CEVerticalSwipeInteractionController.h */,
+				83CAEECCBA394D328AD326B7 /* CEVerticalSwipeInteractionController.m */,
+				58C9A39FD96041E1A345FF9C /* Support Files */,
+			);
+			name = VCTransitionsLibrary;
+			path = VCTransitionsLibrary;
+			sourceTree = "<group>";
+		};
+		31F7E994436545A6B6EFACDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				898DA9F654724C948E5336A7 /* Pods.xcconfig */,
+				A0EDDDC83B5B46F7B53F2561 /* Pods-acknowledgements.markdown */,
+				8E67128FAC284B33927398C4 /* Pods-acknowledgements.plist */,
+				AC4D76FC969B4000A3163F60 /* Pods-dummy.m */,
+				62883C0440664D03A9B62F6F /* Pods-environment.h */,
+				CBC1F2F108024DE7AFEC3ACC /* Pods-resources.sh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		58C9A39FD96041E1A345FF9C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A34BFC4715EF471EA31CD52A /* Pods-VCTransitionsLibrary.xcconfig */,
+				7D8E8AF006E74A408F321119 /* Pods-VCTransitionsLibrary-Private.xcconfig */,
+				F3DEED19E9D6426FABF2E245 /* Pods-VCTransitionsLibrary-dummy.m */,
+				52F74BFDD091462389705736 /* Pods-VCTransitionsLibrary-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		674011B960124B16B820056F = {
+			isa = PBXGroup;
+			children = (
+				9A9E0AB98CA3428B92DC41CC /* Podfile */,
+				119E6EC5AE7A41E4807FD045 /* Frameworks */,
+				69208286546E4D808A48A837 /* Pods */,
+				19F468B56D4B48F39ABF1AE8 /* Products */,
+				A2CCA2CFEF8C471897CF1C86 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		69208286546E4D808A48A837 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82E1BF501D8F41E8B6C292AD /* AMScrollingNavbar */,
+				2839F14838EF41DD99563229 /* VCTransitionsLibrary */,
+				B8C5EAB0C49B4CC583BE35B1 /* iToast */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6CBFB2461BD545A6A598F9D1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B5C46397F7848D0817C5F83 /* Pods-iToast.xcconfig */,
+				84F645455B97440E8230BC19 /* Pods-iToast-Private.xcconfig */,
+				BBE7499641EC4A9F945DB450 /* Pods-iToast-dummy.m */,
+				15730AE2146A4ECEBB326AA8 /* Pods-iToast-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		82E1BF501D8F41E8B6C292AD /* AMScrollingNavbar */ = {
+			isa = PBXGroup;
+			children = (
+				70DE445DB87B49E7BAA494B3 /* UIViewController+ScrollingNavbar.h */,
+				FD0065FBBA03433C8988CF92 /* UIViewController+ScrollingNavbar.m */,
+				B46075576CBD4AA2881ADE23 /* Support Files */,
+			);
+			name = AMScrollingNavbar;
+			path = AMScrollingNavbar;
+			sourceTree = "<group>";
+		};
+		A2CCA2CFEF8C471897CF1C86 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31F7E994436545A6B6EFACDE /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B46075576CBD4AA2881ADE23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF44A60FC1524B6AB8A3D5AF /* Pods-AMScrollingNavbar.xcconfig */,
+				50E6126779D0414DA960FA98 /* Pods-AMScrollingNavbar-Private.xcconfig */,
+				B46F596DDFDF47F999684B40 /* Pods-AMScrollingNavbar-dummy.m */,
+				E35D1683EAF043E5B93DCFBB /* Pods-AMScrollingNavbar-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		B8C5EAB0C49B4CC583BE35B1 /* iToast */ = {
+			isa = PBXGroup;
+			children = (
+				DDB08925537142E6B5C9048E /* iToast.h */,
+				B70BF238107942669329E266 /* iToast.m */,
+				6CBFB2461BD545A6A598F9D1 /* Support Files */,
+			);
+			name = iToast;
+			path = iToast;
+			sourceTree = "<group>";
+		};
+		F44EBFF2D7324491B5B07D05 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DA193BEA80FC485FB31D2F04 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		073F2EC49C414513B8AF9840 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E7CBCA4FFA4C3999C4B8C8 /* CEBaseInteractionController.h in Headers */,
+				D2AB8E6F1C7E424EA72A95AA /* CECardsAnimationController.h in Headers */,
+				9791E7F57CA54CC7A129CB39 /* CECrossfadeAnimationController.h in Headers */,
+				C58389A1E81D4165852836E0 /* CECubeAnimationController.h in Headers */,
+				E2D7CFC382CC4A9F801BE2FC /* CEExplodeAnimationController.h in Headers */,
+				0142DB5D537E4EFB840C702F /* CEFlipAnimationController.h in Headers */,
+				D6971D4A8AB2414690C880C6 /* CEFoldAnimationController.h in Headers */,
+				ACB0320A647C430AAB9244A8 /* CEHorizontalSwipeInteractionController.h in Headers */,
+				F2DD537EFCD54340BE28EE1E /* CENatGeoAnimationController.h in Headers */,
+				FA363DC176CB4AD7A26511E7 /* CEPinchInteractionController.h in Headers */,
+				514C66C5228A4C3EAF1A8568 /* CEPortalAnimationController.h in Headers */,
+				0AE50045E26E406E936EB5FF /* CEReversibleAnimationController.h in Headers */,
+				63C0CE5E7F224BCD820C6C1C /* CETurnAnimationController.h in Headers */,
+				2A119AD48D334877A6C0A192 /* CEVerticalSwipeInteractionController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		578BBF605FC74C798B202867 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A0E49F369445F78C7DC2DE /* iToast.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE974827013E4DC1981E282F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BE6EFDE33248D8A555D0E7 /* UIViewController+ScrollingNavbar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A6B6B70221446BA826D7C5D /* Pods-AMScrollingNavbar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D669072BB7641DD9942F38B /* Build configuration list for PBXNativeTarget "Pods-AMScrollingNavbar" */;
+			buildPhases = (
+				A0DCC7409F4643369F1E3C2D /* Sources */,
+				8EA3F14B4B1C4082881B3F1B /* Frameworks */,
+				DE974827013E4DC1981E282F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AMScrollingNavbar";
+			productName = "Pods-AMScrollingNavbar";
+			productReference = 5BE7DA9A02B34986B7F01DF2 /* libPods-AMScrollingNavbar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5579812B289F457D872610E8 /* Pods-iToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C86E7C184764DFCBBD55C4A /* Build configuration list for PBXNativeTarget "Pods-iToast" */;
+			buildPhases = (
+				55E811ADA61147B3B8058E8F /* Sources */,
+				D2CB478CA7E44F31AC32B90A /* Frameworks */,
+				578BBF605FC74C798B202867 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-iToast";
+			productName = "Pods-iToast";
+			productReference = A8BBCB8D0782463BAAC2AE03 /* libPods-iToast.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		939373831A424E59901A681B /* Pods-VCTransitionsLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E932E5317E1488BA37BE732 /* Build configuration list for PBXNativeTarget "Pods-VCTransitionsLibrary" */;
+			buildPhases = (
+				865F336D570D4E78989E0DB8 /* Sources */,
+				F0A3FA04B8FA423FBD9DA5AA /* Frameworks */,
+				073F2EC49C414513B8AF9840 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-VCTransitionsLibrary";
+			productName = "Pods-VCTransitionsLibrary";
+			productReference = F8A662BE32314016811B31A3 /* libPods-VCTransitionsLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AFEE0ADBBC5943B58078AD79 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E3A6D893EDA40C48CB392EC /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				33671DEE50BD4765B4706430 /* Sources */,
+				528D5C6FC6E84A37845CD5BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9FF6525180C4C51983EEEDF /* PBXTargetDependency */,
+				B793A29EA0E04767BF9D6891 /* PBXTargetDependency */,
+				D2BA7961BDFD4C0D87FFAE73 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = A925E7BA35A14D69A4899990 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07DE6215A2A34322B648E112 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 8DD6ABEB24A5401A80BA861A /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 674011B960124B16B820056F;
+			productRefGroup = 19F468B56D4B48F39ABF1AE8 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				AFEE0ADBBC5943B58078AD79 /* Pods */,
+				0A6B6B70221446BA826D7C5D /* Pods-AMScrollingNavbar */,
+				939373831A424E59901A681B /* Pods-VCTransitionsLibrary */,
+				5579812B289F457D872610E8 /* Pods-iToast */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33671DEE50BD4765B4706430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF359077868C4101BFCD3793 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E811ADA61147B3B8058E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023A0D7A151F4241BA6CDF03 /* Pods-iToast-dummy.m in Sources */,
+				F482A18ADDDE4DAEB08789C3 /* iToast.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		865F336D570D4E78989E0DB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8073EEE5F81D424BA57E833E /* CEBaseInteractionController.m in Sources */,
+				F7416D3B4A7D45E88A1DD708 /* CECardsAnimationController.m in Sources */,
+				E62D1D8BEBB84F7694E897DF /* CECrossfadeAnimationController.m in Sources */,
+				EA39D3C75D4F449AB8168011 /* CECubeAnimationController.m in Sources */,
+				B35F326180A04229B6FC2D6C /* CEExplodeAnimationController.m in Sources */,
+				25D0E2D0361D40C4A9CA5926 /* CEFlipAnimationController.m in Sources */,
+				1055F9DACA2C49809641A4A3 /* CEFoldAnimationController.m in Sources */,
+				A42DC7B78C9E45EC86153045 /* CEHorizontalSwipeInteractionController.m in Sources */,
+				D8FCD455A43F41FCA084FF1B /* CENatGeoAnimationController.m in Sources */,
+				BA5588EDB0C44AD98C8F010E /* CEPinchInteractionController.m in Sources */,
+				ED7D2BC2E6C14420825C4734 /* CEPortalAnimationController.m in Sources */,
+				3ACE01D32DA6408099188652 /* CEReversibleAnimationController.m in Sources */,
+				7A26DB95714F4BC696EAD829 /* CETurnAnimationController.m in Sources */,
+				1ECE2DE856DE4A5197A5745A /* CEVerticalSwipeInteractionController.m in Sources */,
+				A3D289E2A5F349AB99B06648 /* Pods-VCTransitionsLibrary-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0DCC7409F4643369F1E3C2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA648E36E3294086BBC8E3D8 /* Pods-AMScrollingNavbar-dummy.m in Sources */,
+				F6DC6055B08E4F1CB8B9A174 /* UIViewController+ScrollingNavbar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B793A29EA0E04767BF9D6891 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 939373831A424E59901A681B /* Pods-VCTransitionsLibrary */;
+			targetProxy = 2308260CB75A4407BD314267 /* PBXContainerItemProxy */;
+		};
+		D2BA7961BDFD4C0D87FFAE73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5579812B289F457D872610E8 /* Pods-iToast */;
+			targetProxy = 1E29D7473D6E486F919C460E /* PBXContainerItemProxy */;
+		};
+		E9FF6525180C4C51983EEEDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A6B6B70221446BA826D7C5D /* Pods-AMScrollingNavbar */;
+			targetProxy = 4359D85EE2544E8C957F5B57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		020D4EACD2B74B3982DC99F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898DA9F654724C948E5336A7 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		33524B1F4A374C4C84292EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D8E8AF006E74A408F321119 /* Pods-VCTransitionsLibrary-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-VCTransitionsLibrary-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		44620FBAA87A4C38A4098485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84F645455B97440E8230BC19 /* Pods-iToast-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-iToast-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DFC50737DED4F94973035CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898DA9F654724C948E5336A7 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		54DD249CC71F409ABCA50C7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7363CBAF26E242F9AB27E799 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E6126779D0414DA960FA98 /* Pods-AMScrollingNavbar-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-AMScrollingNavbar-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92EBE6C9DB4D4A7E973EAB3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E6126779D0414DA960FA98 /* Pods-AMScrollingNavbar-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-AMScrollingNavbar-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9C34AF6D047B47BFA29BF91C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D8E8AF006E74A408F321119 /* Pods-VCTransitionsLibrary-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-VCTransitionsLibrary-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD15B8C219F14B05BE80BBB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84F645455B97440E8230BC19 /* Pods-iToast-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-iToast-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F53A09AB37AE4F19BAC57B43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C86E7C184764DFCBBD55C4A /* Build configuration list for PBXNativeTarget "Pods-iToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD15B8C219F14B05BE80BBB1 /* Debug */,
+				44620FBAA87A4C38A4098485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D669072BB7641DD9942F38B /* Build configuration list for PBXNativeTarget "Pods-AMScrollingNavbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92EBE6C9DB4D4A7E973EAB3F /* Debug */,
+				7363CBAF26E242F9AB27E799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E932E5317E1488BA37BE732 /* Build configuration list for PBXNativeTarget "Pods-VCTransitionsLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33524B1F4A374C4C84292EAC /* Debug */,
+				9C34AF6D047B47BFA29BF91C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DD6ABEB24A5401A80BA861A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F53A09AB37AE4F19BAC57B43 /* Debug */,
+				54DD249CC71F409ABCA50C7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E3A6D893EDA40C48CB392EC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				020D4EACD2B74B3982DC99F8 /* Debug */,
+				4DFC50737DED4F94973035CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07DE6215A2A34322B648E112 /* Project object */;
+}

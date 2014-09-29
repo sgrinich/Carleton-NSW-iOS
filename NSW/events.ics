@@ -1,0 +1,1079 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Reason 4.0//EN
+X-WR-CALNAME;VALUE=TEXT:New Students 2014
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VEVENT
+UID:20100804113550-653161@carleton.edu
+SUMMARY:NSW: Office of Intercultural and International Life Welcome Reception
+DESCRIPTION:The Office of Intercultural and International Life (OIIL) invites students 
+ and parents to an informal outdoor reception. Tours of Stimson House, Carle
+ ton’s intercultural center, also will be available. Enjoy some refreshmen
+ ts as we connect new students and their families to the Carleton community.
+  Are you interested in having an OIIL Peer Leader? This is a great time to 
+ sign up. All are welcome. Rain location: Stimson House.
+LOCATION:Alumni Guest House Patio
+URL:https://apps.carleton.edu/newstudents/nsw/week/
+LAST-MODIFIED:20120726T115558
+CREATED:20100804T113550
+DTSTART:20120904T140000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804114931-653183@carleton.edu
+SUMMARY:NSW: Spiritual Life at Carleton Welcome Reception
+DESCRIPTION:Want to know more about religious and spiritual life at Carleton and in Nor
+ thfield? The chaplains and chaplain's associates (student peer leaders) wil
+ l host a reception and be available to answer questions about the many serv
+ ices, discussions, and holiday events representing a wide variety of religi
+ ous perspectives. Join us for treats in the Chapel.
+LOCATION:Skinner Memorial Chapel
+URL:https://apps.carleton.edu/newstudents/nsw/week/
+LAST-MODIFIED:20120726T115859
+CREATED:20100804T114931
+DTSTART:20120904T140000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804115132-653190@carleton.edu
+SUMMARY:NSW: TRIO/Student Support Services Welcome Reception
+DESCRIPTION:Visit the beautiful house of TRIO/Student Support Services located at 216 C
+ ollege Street to learn how TRIO/Student Support Services supports students
+ from low-income, first generation backgrounds and students with disabilitie
+ s, and why this is important for everyone at Carleton.
+LOCATION:216 College Street
+URL:https://apps.carleton.edu/newstudents/nsw/week/
+LAST-MODIFIED:20120726T115810
+CREATED:20100804T115132
+DTSTART:20120904T140000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804115306-653193@carleton.edu
+SUMMARY:NSW Parent Information Session: The First Year at Carleton
+DESCRIPTION:The beginning of a college career brings momentous transitions to students
+ and their families. At this session, staff and faculty will describe the va
+ rious resources for guidance and assistance available to Carleton students
+ and make some suggestions about parents’ roles in a liberal arts educatio
+ n.
+LOCATION:Concert Hall
+LAST-MODIFIED:20120726T151934
+CREATED:20100804T115306
+DTSTART:20120904T150000
+DURATION:PT0H45M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804115441-653195@carleton.edu
+SUMMARY:NSW Parent Information Session: Finances at Carleton: What to Expect in the
+  Coming Year
+DESCRIPTION:This session is designed for you to meet staff members who are here to help
+  answer your questions regarding college finances and financial aid as they
+  relate to Carleton College. Presentation leaders: Rod Oto, associate dean
+ of admissions/director of student financial services, Mike Kotchevar, senio
+ r assistant director of student financial services, and Debra Fawcett, acco
+ unts specialist.
+LOCATION:Concert Hall
+LAST-MODIFIED:20120726T152054
+CREATED:20100804T115441
+DTSTART:20120904T154500
+DURATION:PT0H45M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804115658-653199@carleton.edu
+SUMMARY:NSW: Parent Reception
+DESCRIPTION:This is an opportunity to ask more specific questions about topics you hear
+ d about earlier in the day. Staff from the Division of Student Life will be
+  available to address all those lingering questions regarding student life
+ at Carleton. This is also a great time to meet some fellow Carleton parents
+ . Enjoy light appetizers before you head home. A brief message will be deli
+ vered at 6:15 p.m.
+LOCATION:Weitz Center Commons
+LAST-MODIFIED:20120726T152155
+CREATED:20100804T115658
+DTSTART:20120904T180000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804115907-653205@carleton.edu
+SUMMARY:New Student Week Welcome & Registration
+DESCRIPTION:Welcome to Carleton! Make this your first stop when you arrive on campus. Y
+ ou’ll receive a welcome packet and meet lots of friendly students and sta
+ ff members who will get you pointed in the right direction. Just look for t
+ he HUGE tent on the Bald Spot near the Chapel and main entrance to campus.
+ Can’t find it? Just look for the staff members in the blue t-shirts for a
+ ssistance. For those arriving after 3:00 p.m., late check in will be availa
+ ble until 6:00 p.m. at the Sayles-Hill information desk.
+LOCATION:Bald Spot Welcome Tent
+LAST-MODIFIED:20120726T114107
+CREATED:20100804T115907
+DTSTART:20120904T080000
+DURATION:PT7H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804120106-653207@carleton.edu
+SUMMARY:NSW: Campus Tours
+DESCRIPTION:Tours are approximately 45 minutes in length and begin at 11:00 a.m., 12:00
+  p.m., and 1:00 p.m. You may have toured campus briefly when you were consi
+ dering Carleton, but now it’s time to learn more. This campus tour will p
+ rovide useful information about the College and assist you in finding your
+ way around.
+LOCATION:Bald Spot Welcome Tent
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T114503
+CREATED:20100804T120106
+DTSTART:20120904T110000
+DURATION:PT3H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804120240-653210@carleton.edu
+SUMMARY:NSW: Library Tours
+DESCRIPTION:Tours are approximately 45 minutes in length and begin at 11:00 a.m., 12:00
+  p.m., and 1:00 p.m. You may have toured campus briefly when you were consi
+ dering Carleton, but now it’s time to learn more. This campus tour will p
+ rovide useful information about the College and assist you in finding your
+ way around.
+LOCATION:Bald Spot Welcome Tent
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T114550
+CREATED:20100804T120240
+DTSTART:20120904T110000
+DURATION:PT3H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804120407-653218@carleton.edu
+SUMMARY:NSW: Student Organic Farm Tours
+DESCRIPTION:Tours are approximately 1 hour in length and begin at 11 a.m. and 1 p.m. St
+ udents will be eating some of this food throughout the year in the dining h
+ alls, so come see how it’s grown. Join the 2012 summer farm Interns on a
+ tour of both the student organic farm and the “Eat the Lawn” campus gar
+ den. You’ll learn about how the farm is run and see what’s growing.
+LOCATION:Bald Spot Welcome Tent
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T114915
+CREATED:20100804T120407
+DTSTART:20120904T110000
+DURATION:PT2H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804120800-653224@carleton.edu
+SUMMARY:NSW: Wind Turbine tours
+DESCRIPTION:Tours are approximately forty minutes in length (including transportation)
+ and begin at 11:30 a.m. and 12:15 p.m. "You’ve probably heard about our s
+ ustainability claim to fame – that Carleton’s 1.65 MW turbine is the fi
+ rst of its kind to be owned by a college or university – so now come expe
+ rience it for yourself. Tours are scheduled to coincide with the steam plan
+ t tours – consider taking a wind turbine/steam plant double-header tour!"
+  NOTE: Space is limited to 16 due to the fact that the turbine is off-campu
+ s. Please sign up for the tour at the Bald Spot Welcome Tent prior to the s
+ tart of the tour.
+LOCATION:Bald Spot Welcome Tent
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T115239
+CREATED:20100804T120800
+DTSTART:20120904T113000
+DURATION:PT2H5M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804121008-653226@carleton.edu
+SUMMARY:NSW: Steam Plant Tours
+DESCRIPTION:This may be one of your only chances to see where Carleton’s lighting, wa
+ ter, heating, and refrigeration come from and how it gets to your student�
+ �s desk lamp, shower, heater, or mini-fridge. Get ready to see the facility
+  plant’s maze of machinery and pipes and learn about boilers, heating, an
+ d more. Tours are scheduled to coincide with the wind turbine tours, so con
+ sider taking a wind turbine/steam plant double-header tour.
+LOCATION:Bald Spot Welcome Tent
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T115334
+CREATED:20100804T121008
+DTSTART:20120904T113000
+DURATION:PT0H45M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804121200-653229@carleton.edu
+SUMMARY:NSW: Introduction to Your New Student Week (NSW) Group
+DESCRIPTION:Here you will meet other new Carls, as well as several returning students c
+ alled “Peer Leaders” who will be there to help you throughout NSW. You
+ will review the NSW schedule, learn more about Carleton, and begin asking a
+ ll those pressing questions. You’ll be with this group throughout the wee
+ k and beyond, so you definitely don’t want to miss this first meeting.
+LOCATION:Bald Spot
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T115948
+CREATED:20100804T121200
+DTSTART:20120904T150000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804122537-653232@carleton.edu
+SUMMARY:NSW: A Carleton Welcome
+DESCRIPTION:Your journey is just beginning. Hear from the President, the Vice President
+  for Student Development & Dean of Students and others for a true Carleton
+ welcome with details on the incoming class; what it means to be a Carl; wha
+ t to expect this week and the years ahead; singing, cheering, dancing and l
+ aughter will be included! Students, you will be seated separate from your p
+ arents with your New Student Week group.
+LOCATION:Skinner Memorial Chapel
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T120134
+CREATED:20100804T122537
+DTSTART:20120904T163000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804122652-653234@carleton.edu
+SUMMARY:NSW: New Student Week (NSW) Group Meeting & Picnic Dinner
+DESCRIPTION:This is the perfect time to meet other new students along with a few return
+ ing students as well. Before the picnic you will meet briefly with your NSW
+  Group.
+LOCATION:Bald Spot
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T120420
+CREATED:20100804T122652
+DTSTART:20120904T180000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804122811-653236@carleton.edu
+SUMMARY:NSW: Floor Meeting With Your Resident Assistant(s)
+DESCRIPTION:This floor meeting will be an opportunity for you to meet other new first y
+ ear students living on your floor. Your Resident Assistant RA will share in
+ formation about expectations regarding living on campus, upcoming plans for
+  the year, and how you can be a part of your new community at Carleton.
+LOCATION:Residence Hall Floor Lounge
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T120510
+CREATED:20100804T122811
+DTSTART:20120904T193000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804123404-653238@carleton.edu
+SUMMARY:NSW: Hypnotist Chuck Mulligan
+DESCRIPTION:Prepare to be amazed! A professional hypnotist for over 20 years, Chuck is
+ a master at entertaining college audiences while maintaining the dignity of
+  his volunteers. If you’ve ever wanted to see your classmates “quack li
+ ke a duck” (or something else equally ridiculous) in front of 700 other s
+ tudents, this may be your only chance. Note: May contain adult content and
+ language. Attendance at this event is not mandatory, but it’s a lot of fu
+ n!
+LOCATION:Skinner Memorial Chapel
+URL:https://apps.carleton.edu/newstudents/nsw/week/0907/
+LAST-MODIFIED:20120726T120858
+CREATED:20100804T123404
+DTSTART:20120904T210000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804124630-653247@carleton.edu
+SUMMARY:NSW: The Buzz
+DESCRIPTION:The Buzz provides new students with REAL information about the continuum of
+  alcohol use and abuse as it pertains to Carleton students. Learn important
+  policy information from your peers and be a part of this campus conversati
+ on about choices you can make regarding alcohol use at Carleton. Followed b
+ y brief group discussions with your NSW Group.
+LOCATION:Skinner Memorial Chapel
+URL:https://apps.carleton.edu/newstudents/nsw/week/0908/
+LAST-MODIFIED:20120726T121742
+CREATED:20100804T124630
+DTSTART:20120905T093000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804124747-653251@carleton.edu
+SUMMARY:NSW: Group Academic Advising Meeting
+DESCRIPTION:This is an opportunity to get to know your Advisor and your advising group.
+  Advising is a two-way street; you’ll want to do your part to make this a
+  successful relationship. Check The Hub online to learn the name of your Ac
+ ademic Advisor. Your New Student Week Leader will provide your unique meeti
+ ng location at breakfast.
+LOCATION:Various Locations
+URL:https://apps.carleton.edu/newstudents/nsw/week/0908/
+LAST-MODIFIED:20120807T145755
+CREATED:20100804T124747
+DTSTART:20120905T143000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804125102-653255@carleton.edu
+SUMMARY:NSW: Language Placement
+DESCRIPTION:Retesting to confirm placement out of further language study, language inte
+ rviews, and placement testing for students not able to complete online test
+ ing. Arabic LDC 263 Asian Languages (Chinese, Japanese) LDC 244 French LDC
+ 330 German LDC 330 Greek LDC 202 Hebrew LDC 261 Latin LDC 202 Russian LDC 3
+ 02 Spanish LDC 330
+LOCATION:Language and Dining Center (LDC) Classrooms
+URL:https://apps.carleton.edu/newstudents/nsw/week/0908/
+LAST-MODIFIED:20120726T122245
+CREATED:20100804T125102
+DTSTART:20120905T130000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804125512-653261@carleton.edu
+SUMMARY:NSW: Music Fest
+DESCRIPTION:The Music Department invites you to learn about Music at Carleton and how y
+ ou can get involved! This presentation will include information about priva
+ te lessons, ensembles, and classroom courses.
+LOCATION:Concert Hall
+URL:https://apps.carleton.edu/newstudents/nsw/week/0908/
+LAST-MODIFIED:20120726T122430
+CREATED:20100804T125512
+DTSTART:20120905T153000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100804125633-653263@carleton.edu
+SUMMARY:NSW: Doing It Right: Consent, Dating & Relationships
+DESCRIPTION:Navigating the world of dating, relationships and sex at college can be exc
+ iting and sometimes confusing. This presentation is designed to give you so
+ me tips about staying safe, healthy and happy at Carleton. We will talk abo
+ ut consent, resources at Carleton, our sexual misconduct policies and give
+ you advice from current Carleton students.
+LOCATION:Skinner Memorial Chapel
+URL:https://apps.carleton.edu/newstudents/nsw/week/0908/
+LAST-MODIFIED:20120726T160342
+CREATED:20100804T125633
+DTSTART:20120907T093000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806152239-654027@carleton.edu
+SUMMARY:NSW: Recreation Center Open House
+DESCRIPTION:Stop by anytime between 12:30 and 3:00 p.m. and enjoy a variety of activiti
+ es! Gauge your mood and choose the event/s that best suit you! Bring your w
+ orkout shoes in your new Campus Recreation/Student Activities bag!
+LOCATION:Rec center
+LAST-MODIFIED:20120726T144625
+CREATED:20100806T152239
+DTSTART:20120909T123000
+DURATION:PT2H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806152642-654032@carleton.edu
+SUMMARY:NSW: Library Tours
+DESCRIPTION:You may have seen part of the Gould Library during previous visits, but now
+  it’s time to see the whole thing. Join us for a chance to explore all th
+ e nooks and crannies of the libe and learn how to get reserves, books, jour
+ nal articles, DVDs, reference help and more. Discover our many different co
+ llections the best hidden study areas and napping couches.
+LOCATION:Gould Library Lobby
+URL:https://apps.carleton.edu/newstudents/nsw/week/0909/
+LAST-MODIFIED:20120726T123806
+CREATED:20100806T152642
+DTSTART:20120906T113000
+DURATION:PT0H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806152742-654034@carleton.edu
+SUMMARY:NSW: Arboretum Tour
+DESCRIPTION:Hike a small slice of the Lower Arboretum to learn about the restoration wo
+ rk the College is doing in this 880 acre nature preserve. We won’t have t
+ ime to share the whole place with you, but hope to give you enough informat
+ ion to encourage you to explore more of the 15 miles of trails on your own.
+  This tour departs from the kiosk in front of the Recreation Center.
+LOCATION:Arb Kiosk, Rec Center
+LAST-MODIFIED:20120726T123920
+CREATED:20100806T152742
+DTSTART:20120906T113000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806152912-654036@carleton.edu
+SUMMARY:NSW: Outside the Classroom: Get Involved!
+DESCRIPTION:Learn more about the Carleton Student Association (student government), how
+  to get involved in student organizations, and what Carleton has to offer b
+ eyond the classroom. Meet your elected student body officers and find out w
+ hat your student government can do for you! Immediately following, there wi
+ ll be a variety of student directed information sessions to learn more abou
+ t topics related to student life at Carleton – for students, by students!
+LOCATION:Weitz Center Cinema & Various Classrooms
+LAST-MODIFIED:20120726T144259
+CREATED:20100806T152912
+DTSTART:20120909T100000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806153050-654038@carleton.edu
+SUMMARY:NSW: Gould Library Mystery
+DESCRIPTION:There’s a mystery to be solved in the “Libe”! Come to the library for
+  food, prizes, darkness, and mystery mayhem. Space is limited to 100 studen
+ ts, so come early!
+LOCATION:Gould Library
+LAST-MODIFIED:20120726T155928
+CREATED:20100806T153050
+DTSTART:20120906T200000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806153221-654040@carleton.edu
+SUMMARY:NSW: Residence Hall Socials
+DESCRIPTION:This is a chance meet residents of your hall, beyond your floor mates, and
+ your Residence Life staff. Your Resident Assistant (RA) will inform you of
+ your hall social location at your first floor meeting.
+LOCATION:Various Locations
+URL:https://apps.carleton.edu/newstudents/nsw/week/0909/
+LAST-MODIFIED:20120726T125647
+CREATED:20100806T153221
+DTSTART:20120906T210000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806153321-654043@carleton.edu
+SUMMARY:NSW: Student Employee Orientation
+DESCRIPTION:If you have been assigned a campus job this is a perfect time for you to to
+ uch base with your supervisor, visit your office-area, get your hours sched
+ uled, and complete necessary paperwork. Contact your supervisor for more in
+ formation.
+LOCATION:Various Locations
+URL:https://apps.carleton.edu/newstudents/nsw/week/0910/
+LAST-MODIFIED:20120726T140935
+CREATED:20100806T153321
+DTSTART:20120907T143000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806153447-654045@carleton.edu
+SUMMARY:NSW: Academic Success
+DESCRIPTION:Come listen to a panel of faculty from a range of disciplines. They will sh
+ are their thoughts on academics, the first term, faculty expectations, stud
+ y habits, office hours, and general strategies for thriving, not just survi
+ ving, at Carleton. The panel will save some time for Q & A, so get your que
+ stions ready!
+LOCATION:Concert Hall
+LAST-MODIFIED:20120726T124341
+CREATED:20100806T153447
+DTSTART:20120906T133000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806153618-654048@carleton.edu
+SUMMARY:NSW: Academic Fair
+DESCRIPTION:Talk with faculty and student departmental advisers about course selection,
+  placement, and anything else that’s on your mind. If you have been assig
+ ned or plan to have a work study position, this is the perfect time to comp
+ lete your employment paperwork.
+LOCATION:Recreation Center
+URL:https://apps.carleton.edu/newstudents/nsw/week/0910/
+LAST-MODIFIED:20120726T124438
+CREATED:20100806T153618
+DTSTART:20120906T143000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806153854-654054@carleton.edu
+SUMMARY:NSW: Registration Changes
+DESCRIPTION:Today you can make changes without the instructor signature, which you’ll
+  need starting Monday.
+LOCATION:Registrar's Office - Laird Hall
+URL:https://apps.carleton.edu/newstudents/nsw/week/0910/
+LAST-MODIFIED:20120726T155947
+CREATED:20100806T153854
+DTSTART:20120906T080000
+DURATION:PT9H30M0S
+RRULE:FREQ=DAILY;UNTIL=20120907T235959;INTERVAL=1
+SEQUENCE:1
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806154642-654066@carleton.edu
+SUMMARY:NSW: Shabbat Service and Dinner
+DESCRIPTION:Service led by Rabbi Shosh Dworsky, associate chaplain.
+LOCATION:Page House East
+URL:https://apps.carleton.edu/newstudents/nsw/week/0910/
+LAST-MODIFIED:20120726T141408
+CREATED:20100806T154642
+DTSTART:20120907T180000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806154840-654071@carleton.edu
+SUMMARY:NSW: "NOlympics"
+DESCRIPTION:Now you are prepared for one of the most “udderly” amazing nights at Ca
+ rleton. Participate in a variety of NOlympic events and bond with your floo
+ r.
+LOCATION:Recreation Center
+URL:https://apps.carleton.edu/newstudents/nsw/week/0910/
+LAST-MODIFIED:20120726T141549
+CREATED:20100806T154840
+DTSTART:20120907T200000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806155140-654083@carleton.edu
+SUMMARY:NSW: Into the Arboretum - Service Project
+DESCRIPTION:Students will gain familiarity with the Arboretum and build community withi
+ n their new student group by working together to eradicate Buckthorn, an in
+ vasive species. Please wear clothes that can get dirty, long pants, closed-
+ toe shoes, socks, and rain gear if needed. This event happens rain or shine
+ . Feel free to bring a water bottle. Hosted by Acting the Center for Commun
+ ity and Civic Engagement (CCCE) and the Arboretum.
+LOCATION:Bell Field
+LAST-MODIFIED:20120726T142333
+CREATED:20100806T155140
+DTSTART:20120908T100000
+DURATION:PT3H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806155256-654087@carleton.edu
+SUMMARY:NSW: Exploring Northfield
+DESCRIPTION:Take a stroll down Division Street to check out all the restaurants, coffee
+  shops and boutiques the town has to offer. The Defeat of Jesse James Days
+ will be having festivities all weekend as well. For a complete schedule of
+ events and more information about The Defeat of Jesse James Days check out
+ the website: http://www.djjd.org/
+LOCATION:NSW Group Meeting Location
+LAST-MODIFIED:20120726T142717
+CREATED:20100806T155256
+DTSTART:20120908T113000
+DURATION:PT2H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806155631-654094@carleton.edu
+SUMMARY:NSW: Closing Ceremony & Class of 2016 Variety Show
+DESCRIPTION:Join your classmates and President Poskanzer to celebrate your first week a
+ s a Carl. The “NOlympics” results will be announced and prizes will be
+ awarded. Following the awards, your class’ talents will be showcased in t
+ he annual NSW variety show.
+LOCATION:Skinner Memorial Chapel
+LAST-MODIFIED:20120726T144127
+CREATED:20100806T155631
+DTSTART:20120908T200000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806160930-654117@carleton.edu
+SUMMARY:Shopping Shuttles
+DESCRIPTION:Buses will run from Willis Hall to Target/Cub approximately every 20 minute
+ s. Open to all students on-campus.
+LOCATION:Buses depart from Willis Hall every 20 minutes
+LAST-MODIFIED:20130904T134315
+CREATED:20100806T160930
+DTSTART:20130915T130000
+DURATION:PT3H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806164436-654179@carleton.edu
+SUMMARY:NSW: The Best of Carleton Hangouts: Interest Houses and Others
+DESCRIPTION:Since Carleton has a residential campus, some of the best student experienc
+ es occur in our special interest houses and other hangout spaces. Take a fe
+ w minutes to stop by any or all of these venues any time between 8:00 and 9
+ :45 p.m. These venues are open to all students throughout the year, so now
+ is the perfect time to get acquainted with them.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T145948
+CREATED:20100806T164436
+DTSTART:20120909T200000
+DURATION:PT1H45M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20100806165413-654191@carleton.edu
+SUMMARY:Student Organization Fair & All-Campus Picnic
+DESCRIPTION:The event is a great way to learn about the many ways to get involved at Ca
+ rleton. Come visit with over 200 student groups and organizations. Sponsore
+ d by CSA & SAPB. Dining Halls are closed this evening, bring your OneCard t
+ o access your meal plan.
+LOCATION:Bald Spot
+LAST-MODIFIED:20120726T113824
+CREATED:20100806T165413
+DTSTART:20120914T170000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110322212717-719805@carleton.edu
+SUMMARY:Residence Halls Open
+DESCRIPTION:Check-in at the main entrance of your residence hall, begin to unpack, and
+ meet hall staff members and your new roommate(s). Welcome to your new home!
+  Student should check-in at both the Welcome Tent and their residence hall.
+LOCATION:Residence Halls
+LAST-MODIFIED:20120525T154802
+CREATED:20110322T212717
+DTSTART:20120904T080000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822101826-758429@carleton.edu
+SUMMARY:NSW: Time With Your Parent (s)
+DESCRIPTION:Time for those last minute hugs and “goodbyes” before parents attend a
+ reception and depart campus, and students attend the first campus picnic as
+  a Carl.
+LOCATION:Bald Spot
+LAST-MODIFIED:20120726T120239
+CREATED:20110822T101826
+DTSTART:20120904T173000
+DURATION:PT0H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822111207-758484@carleton.edu
+SUMMARY:NSW: Live Band Karaoke & Pizza
+DESCRIPTION:Live Band Karaoke. The name says it all. Karaoke with a LIVE BAND! Combinin
+ g the silly fun of karaoke with the energy of a live rock band, Live Band K
+ araoke allows anyone to fulfill their rock-n-roll fantasy.
+LOCATION:Sayles-Hill Great Space
+LAST-MODIFIED:20120726T122635
+CREATED:20110822T111207
+DTSTART:20120905T210000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822112205-758493@carleton.edu
+SUMMARY:NSW: Lunch
+DESCRIPTION:Free lunch provided for families at this location only. Students' meals are
+  included in their dining meal plan, so be sure to bring your OneCard.
+LOCATION:East Dining (Language & Dining Center)
+LAST-MODIFIED:20120726T115447
+CREATED:20110822T112205
+DTSTART:20120904T113000
+DURATION:PT2H15M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822112819-758502@carleton.edu
+SUMMARY:NSW: NSW Group Breakfast Meeting
+DESCRIPTION:Join your NSW Group for a hearty breakfast, served with a side of interesti
+ ng conversation and time for questions. At this meeting you will receive im
+ portant information about meeting your Academic Advisor and begin your conv
+ ersation about alcohol at Carleton. Dining locations will vary and be annou
+ nced in previous NSW Group meetings. Don’t forget to bring your OneCard t
+ o access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T121706
+CREATED:20110822T112819
+DTSTART:20120905T073000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822125420-758603@carleton.edu
+SUMMARY:NSW: Music Auditions
+LAST-MODIFIED:20120726T155446
+CREATED:20110822T125420
+DTSTART:20120906T160000
+DURATION:PT3H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822125457-758604@carleton.edu
+SUMMARY:NSW: Dinner with Your NSW Group
+DESCRIPTION:Exact meeting location will be determined in previous NSW Group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T122541
+CREATED:20110822T125457
+DTSTART:20120905T170000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822125638-758606@carleton.edu
+SUMMARY:NSW: Breakfast with your NSW Group
+DESCRIPTION:At this meeting you will begin your conversation about academics at Carleto
+ n and how to be successful. Dining locations will vary and be announced in
+ previous NSW Group meetings. Don’t forget your OneCard to access your mea
+ l plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T122927
+CREATED:20110822T125638
+DTSTART:20120906T073000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822140000-758620@carleton.edu
+SUMMARY:NSW: Music Auditions
+LAST-MODIFIED:20120726T124128
+CREATED:20110822T140000
+DTSTART:20120906T113000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822141006-758630@carleton.edu
+SUMMARY:NSW: Lunch with your NSW Group
+DESCRIPTION:Exact meeting location will be determined in previous NSW Group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T124220
+CREATED:20110822T141006
+DTSTART:20120906T120000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822141520-758633@carleton.edu
+SUMMARY:NSW: Survey Completion
+DESCRIPTION:Complete two on-line surveys (2011 CIRP Freshman Survey and MyStudentBody.c
+ om). If you have not finished these surveys before coming to campus, this i
+ s a great opportunity to do so. Staff members will be available to help get
+  you started. At Carleton, we try to improve the ways we serve students, so
+  we need everyone’s help.
+LOCATION:Center for Math & Computing (CMC) 109
+LAST-MODIFIED:20120726T130431
+CREATED:20110822T141520
+DTSTART:20120907T113000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110822142305-758638@carleton.edu
+SUMMARY:NSW: Dinner with your Resident Assistant (s)
+DESCRIPTION:Resident Assistant(s) will meet you on your floor lounge before dinner. Don
+ ’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T125434
+CREATED:20110822T142305
+DTSTART:20120906T170000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823143203-758894@carleton.edu
+SUMMARY:NSW: Breakfast with your NSW group
+DESCRIPTION:Topics of discussion will include intramural sports, campus traditions, and
+  sustainability at Carleton (just to name a few). Exact meeting location wi
+ ll be determined in previous NSW Group meetings. Don’t forget to bring yo
+ ur OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T125825
+CREATED:20110823T143203
+DTSTART:20120907T073000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823143744-758912@carleton.edu
+SUMMARY:NSW: Student Employment
+DESCRIPTION:Stop by anytime between 8 a.m. - 3 p.m., if you have been assigned or plan
+ to work on-campus. This is the perfect time to complete your employment pap
+ erwork.
+LOCATION:Severance Great Hall
+LAST-MODIFIED:20120726T140840
+CREATED:20110823T143744
+DTSTART:20120904T080000
+DURATION:PT7H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823144632-758933@carleton.edu
+SUMMARY:NSW: What You Need To Know About Student Employment and Loans
+DESCRIPTION:Most students will work at least some hours between now and graduation and
+ a majority will have taken at least one loan. This session will give you an
+  overview of what you need to know about student loans and student employme
+ nt at Carleton even though you might not have either now.
+LOCATION:Skinner Memorial Chapel
+LAST-MODIFIED:20120726T160148
+CREATED:20110823T144632
+DTSTART:20120907T133000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823145110-758939@carleton.edu
+SUMMARY:NSW: Group Lunch Meeting
+DESCRIPTION:During lunch your New Student Week Leader will provide you with a unique me
+ eting location for your Academic Advisor group meeting. Don’t forget to b
+ ring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T122116
+CREATED:20110823T145110
+DTSTART:20120905T120000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823145958-758961@carleton.edu
+SUMMARY:NSW: Music Auditions
+LAST-MODIFIED:20120726T140014
+CREATED:20110823T145958
+DTSTART:20120907T120000
+DURATION:PT5H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823150202-758967@carleton.edu
+SUMMARY:NSW: Office of Intercultural & International Life Presentation
+DESCRIPTION:More information available in August 2012.
+LOCATION:Skinner Memorial Chapel
+LAST-MODIFIED:20120726T155534
+CREATED:20110823T150202
+DTSTART:20120906T093000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823150614-758973@carleton.edu
+SUMMARY:NSW: Lunch With Your NSW Group
+DESCRIPTION:Exact meeting location will be determined in previous NSW Group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T142511
+CREATED:20110823T150614
+DTSTART:20120907T120000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823151210-758986@carleton.edu
+SUMMARY:NSW: Pathways Of Civic Engagement Panel
+DESCRIPTION:Did you volunteer while in high school? Want to know how to get involved at
+  college? At Carleton, civic engagement encompasses a wide array of opportu
+ nities, both curricular and co-curricular. Hear students, staff, and commun
+ ity partners talk about their diverse experiences. Find out what opportunit
+ ies will fit with your passions and interests. This event is sponsored by t
+ he Center for Community and Civic Engagement (CCCE).
+LOCATION:Concert Hall
+LAST-MODIFIED:20120726T155512
+CREATED:20110823T151210
+DTSTART:20120906T083000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823151358-758988@carleton.edu
+SUMMARY:NSW: The DMCA and You
+DESCRIPTION:What is the DMCA, and why should you care? Who are the RIAA and the MPAA? D
+ oes filesharing equal copyright infringement? We’ll talk about all these
+ things, as well as the dangers of sharing copyrighted material from campus.
+LOCATION:TBA
+LAST-MODIFIED:20120726T141040
+CREATED:20110823T151358
+DTSTART:20120907T154500
+DURATION:PT0H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823151459-758991@carleton.edu
+SUMMARY:NSW: Sustainability At Carleton
+DESCRIPTION:Carleton prides itself on its many sustainability initiatives. However, kee
+ ping our campus green relies on YOUR help as well. Student Sustainability A
+ ssistants (STAs) will give you an idea of how you can contribute to a susta
+ inable community, including an overview of Carleton’s green initiatives.
+LOCATION:Concert Hall
+LAST-MODIFIED:20120726T160250
+CREATED:20110823T151459
+DTSTART:20120907T113000
+DURATION:PT0H45M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823151635-758993@carleton.edu
+SUMMARY:NSW: Dinner With Your NSW Group
+DESCRIPTION:Exact meeting location will be determined in previous NSW Group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T141140
+CREATED:20110823T151635
+DTSTART:20120907T170000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823152251-759006@carleton.edu
+SUMMARY:NSW: Floor Meeting With Your Resident Assistant (s)
+DESCRIPTION:It’s time to come back together as a floor community. This meeting will c
+ over floor announcements and provide time to get ready for NOlympics! Tonig
+ ht, your RA(s) will walk with you to the Recreation Center for group introd
+ uctions – get ready to show your floor pride as you compete for Carleton�
+ ��s coveted giant cow!
+LOCATION:Residence Hall Floor Lounge
+LAST-MODIFIED:20120726T150024
+CREATED:20110823T152251
+DTSTART:20120907T190000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823152542-759012@carleton.edu
+SUMMARY:NSW: Breakfast with your NSW group
+DESCRIPTION:Exact meeting location will be determined in previous NSW group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T141727
+CREATED:20110823T152542
+DTSTART:20120908T080000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110823153321-759018@carleton.edu
+SUMMARY:NSW: Music Auditions
+LAST-MODIFIED:20120726T144435
+CREATED:20110823T153321
+DTSTART:20120909T103000
+DURATION:PT2H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824102658-759195@carleton.edu
+SUMMARY:NSW: Lunch With Your NSW Group
+DESCRIPTION:Exact meeting location will be determined in previous NSW group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T142633
+CREATED:20110824T102658
+DTSTART:20120908T113000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824103013-759200@carleton.edu
+SUMMARY:NSW: Reception with President and Mrs. Poskanzer
+DESCRIPTION:You’re invited to the Poskanzer residence to meet Steve and Jane Poskanze
+ r and have a sweet treat as you mingle with your friends.
+LOCATION:Nutting House (Rain Location, Weitz Center Commons)
+LAST-MODIFIED:20120726T142821
+CREATED:20110824T103013
+DTSTART:20120908T140000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824103407-759203@carleton.edu
+SUMMARY:NSW: Dinner With Your NSW Group
+DESCRIPTION:Exact meeting location will be determined in previous NSW group meetings. D
+ on’t forget to bring your OneCard to access your meal plan.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T143807
+CREATED:20110824T103407
+DTSTART:20120908T170000
+DURATION:PT2H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824103944-759210@carleton.edu
+SUMMARY:NSW: Brunch On Your Own
+DESCRIPTION:10:30 a.m. - 1:00 p.m., East Dining (LDC) 11:30 a.m. - 1:00 p.m., Burton Di
+ ning Hall
+LOCATION:East Dining (LDC) & Burton Dining Hall
+LAST-MODIFIED:20120726T144352
+CREATED:20110824T103944
+DTSTART:20120909T103000
+DURATION:PT2H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824143812-759396@carleton.edu
+SUMMARY:NSW: Music Auditions
+LAST-MODIFIED:20120726T142435
+CREATED:20110824T143812
+DTSTART:20120908T103000
+DURATION:PT3H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824144532-759400@carleton.edu
+SUMMARY:NSW: Rainbow Reception
+DESCRIPTION:Stop by the Gender and Sexuality Center (GSC) to learn more about the LGBT
+ community and meet friendly folks from the GSC.
+LOCATION:Gender and Sexuality Center, Ground Scoville
+LAST-MODIFIED:20120726T145210
+CREATED:20110824T144532
+DTSTART:20120909T130000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110824144834-759405@carleton.edu
+SUMMARY:NSW: Open Play Volleyball
+DESCRIPTION:Open play on the sand courts behind the libe hosted by the Men’s Club Vol
+ leyball Team. All skill and experience levels welcome.
+LOCATION:Outdoor Volleyball Court, Behind the Library
+LAST-MODIFIED:20120726T145008
+CREATED:20110824T144834
+DTSTART:20120909T150000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726121153-867797@carleton.edu
+SUMMARY:NSW: Transfer Student Breakfast
+DESCRIPTION:Time for transfer students to meet with your Academic Advisor, Class Dean a
+ nd Registrar.
+LOCATION:Sayles-Hill 253
+LAST-MODIFIED:20120726T121504
+CREATED:20120726T121153
+DTSTART:20120905T080000
+DURATION:PT1H30M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726121758-867804@carleton.edu
+SUMMARY:NSW: AED Training for the Class of 2016
+DESCRIPTION:Hands on training for CPR and AED, providing students with tools to respond
+  to heart-related medical emergencies.
+LOCATION:Recreation Center
+LAST-MODIFIED:20120726T155322
+CREATED:20120726T121758
+DTSTART:20120905T110000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726124654-867844@carleton.edu
+SUMMARY:NSW: Career Center Presentation
+DESCRIPTION:More information will be available in August 2012.
+LOCATION:Concert Hall
+LAST-MODIFIED:20120726T155902
+CREATED:20120726T124654
+DTSTART:20120906T160000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726140201-867922@carleton.edu
+SUMMARY:NSW: Individual Academic Advising
+DESCRIPTION:A short meeting to introduce yourself, talk over desired changes (if any) r
+ egarding registration and have your questions answered.
+LOCATION:Various Locations
+LAST-MODIFIED:20120726T140726
+CREATED:20120726T140201
+DTSTART:20120907T130000
+DURATION:PT4H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726143203-867979@carleton.edu
+SUMMARY:Shopping Shuttles
+DESCRIPTION:Buses will run from Willis Hall to Target/Cub approximately every 20 minute
+ s. Open to all students on-campus.
+LOCATION:Buses depart from Willis Hall every 20 minutes
+LAST-MODIFIED:20130904T134252
+CREATED:20120726T143203
+DTSTART:20130914T160000
+DURATION:PT4H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726145231-868032@carleton.edu
+SUMMARY:NSW: Office of Intercultural & International Life Reception
+LOCATION:Stimson House
+LAST-MODIFIED:20120726T145346
+CREATED:20120726T145231
+DTSTART:20120909T190000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726145504-868037@carleton.edu
+SUMMARY:NSW: Interfaith Service on Faith & Learning
+DESCRIPTION:Led by Carolyn Fure-Slocum, chaplain and Dr. Adil Ozdemir, soup supper foll
+ ows the service.
+LOCATION:Chapel Sanctuary
+LAST-MODIFIED:20120726T160512
+CREATED:20120726T145504
+DTSTART:20120909T170000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120726150054-868045@carleton.edu
+SUMMARY:NSW: Residence Life Floor Meetings
+LOCATION:Residence Hall Floor Lounge
+LAST-MODIFIED:20120726T150347
+CREATED:20120726T150054
+DTSTART:20120909T220000
+DURATION:PT1H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120411090959-835062@carleton.edu
+SUMMARY:Halls and Houses Close for Non-Seniors at 2 p.m.
+LAST-MODIFIED:20120411T091055
+CREATED:20120411T090959
+DTSTART:20130611T140000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120411090701-835054@carleton.edu
+SUMMARY:Halls and Houses Close for Fall Term at 2 p.m.
+LAST-MODIFIED:20120411T090749
+CREATED:20120411T090701
+DTSTART:20121120T140000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120411090918-835060@carleton.edu
+SUMMARY:Hall and Houses Open at Noon
+LAST-MODIFIED:20120411T090956
+CREATED:20120411T090918
+DTSTART:20130330T120000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20120411090751-835056@carleton.edu
+SUMMARY:Hall and Houses Open at Noon
+LAST-MODIFIED:20120411T090834
+CREATED:20120411T090751
+DTSTART:20130101T120000
+DURATION:PT0H0M0S
+END:VEVENT
+BEGIN:VEVENT
+UID:20110418104654-727704@carleton.edu
+SUMMARY:Halls and Houses Close for Winter Term at 2 p.m.
+LAST-MODIFIED:20120529T141158
+CREATED:20110418T104654
+DTSTART:20130317T140000
+DURATION:PT0H0M0S
+END:VEVENT
+END:VCALENDAR
