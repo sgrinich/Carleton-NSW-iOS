@@ -48,7 +48,7 @@ NSMutableArray *parsedFaq;
     }
     
     
-    NSString *creditAnswerString = @"New Student Week App, iOS: \n\nStephen Grinich '16, Alex Simonides '15, Evan Harris '16. (Carleton College Mobile Application Development class project) Spring 2014.\n\nStephen Grinich '16, (Software Developer, Design) Summer 2014.\n\n\nNew Student Week App, Android:\n\nStephen Grinich '16, (Software Developer, Design) Summer 2014.\n\n\nSpecial thanks to Louis Newman, Jeff Ondich, Ana Sontag, and Lee Clark.";
+    NSString *creditAnswerString = @"New Student Week App, iOS: \n\nStephen Grinich '16, Alex Simonides '15, Evan Harris '15. (Carleton College Mobile Application Development class project) Spring 2014.\n\nStephen Grinich '16, (Software Developer, Design) Summer 2014.\n\n\nNew Student Week App, Android:\n\nStephen Grinich '16, (Software Developer, Design) Summer 2014.\n\n\nSpecial thanks to Louis Newman, Jeff Ondich, Ana Sontag, and Lee Clark.";
     FaqItem *creditItem = [[FaqItem alloc]initWithQuestion:@"Who made this app?" Answer:creditAnswerString Section:@"NewStudents"];
     [parsedFaq addObject:creditItem];
     

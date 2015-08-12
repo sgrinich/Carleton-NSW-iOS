@@ -73,8 +73,18 @@ int selectedIndex;
     
     [self followScrollView:self.tableView];
     
-    [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    SWRevealViewController *revealViewController = self.revealViewController;
 
+    
+    if ( revealViewController )
+    {
+        [self.revealButtonItem setTarget: self.revealViewController];
+        [self.revealButtonItem setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
+    [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     
 }
 
@@ -173,8 +183,7 @@ int selectedIndex;
     
 
     FaqTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    //FaqItem *item = self.listItems[(NSUInteger) indexPath.row];
-    //cell.questionLabel.text = [item question];
+    
     
     switch (indexPath.section) {
         case 0:
@@ -361,6 +370,8 @@ int selectedIndex;
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, myLabel.frame.size.height)];
     [headerView setBackgroundColor:[NSWStyle oceanBlueColor]];
     [headerView addSubview:myLabel];
+    //TODO: Center view in container
+    myLabel.center = CGPointMake(headerView.frame.size.width/2, headerView.frame.size.height/2);
     
     return headerView;
 }

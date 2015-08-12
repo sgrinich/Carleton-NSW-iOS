@@ -12,6 +12,7 @@
 #import "FaqTableViewCell.h"
 #import "NSWStyle.h"
 #import "DataSourceManager.h"
+#import "SWRevealViewController.h"
 
 @interface FaqDetailViewController ()
 

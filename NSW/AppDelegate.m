@@ -34,6 +34,9 @@
     // Initialize the singleton downloader
     [FLDownloader sharedDownloader];
     
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
     
     
     return YES;

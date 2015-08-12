@@ -108,6 +108,10 @@ NSMutableArray *parsedContacts;
     if([title isEqualToString:@"OneCard"]){
         email = @"onecard@carleton.edu";
     }
+    
+    if([title isEqualToString:@"Student Health Insurance"]){
+        email = @"ckoen@carleton.edu";
+    }
 
 
     return [[Contact alloc] initWithTitle:title Phone:phone Fax:fax Email:email];

@@ -11,14 +11,11 @@
 		2DBA1144374E8617A6191C18 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA139D7276BDC39D4DB255 /* reveal-icon.png */; };
 		2DBA11AE1B9970A8E6772744 /* BaseNSWTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1E9FDCADA3DDD5AC595A /* BaseNSWTableViewController.m */; };
 		2DBA12A52E9246896DE26E84 /* events.ics in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1EE6E371CB5470BFB579 /* events.ics */; };
-		2DBA145C9F5E8FBDAF398B20 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1D9C44FC924E305DABBC /* SWRevealViewController.m */; };
-		2DBA1466DB064C56C6700DF2 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11891644C1A2292AD911 /* MenuViewController.m */; };
 		2DBA158FB79AE0291C63AD5A /* DataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA137AE7289011209C802F /* DataSourceManager.m */; };
 		2DBA1604FAF3CAA6FA3288A8 /* FLDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA146BBDAA372C1B5E4B37 /* FLDownloadTask.m */; };
 		2DBA1709FF76217A332E42CC /* BaseNSWDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA161F24FB78D7CD613800 /* BaseNSWDataSource.m */; };
 		2DBA174E2354E5295C25AF96 /* FLDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA174CF3B30C6834562744 /* FLDownloader.m */; };
 		2DBA1ADD2D7E87F1AEA01F08 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA14AC9697B76D6FF558C1 /* ContactTableViewCell.m */; };
-		2DBA1BE3106731EC27A0A6BA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1955C9B983DEC4C57B77 /* MapViewController.m */; };
 		2DBA1BF8815FA54720707B52 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1DBB01806B9A766482F6 /* reveal-icon@2x.png */; };
 		2DBA1DE1FBA75AE34934C6BC /* CarlTermTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA12024D13496A05CB72A7 /* CarlTermTableViewCell.m */; };
 		2DBA1ECE9BB7E4234609C451 /* events_test.ics in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA1C71116CB7163E1AC0A9 /* events_test.ics */; };
@@ -44,13 +41,22 @@
 		8011D58F19400C77001D9DBD /* alarm_clock-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011D58E19400C77001D9DBD /* alarm_clock-25.png */; };
 		8011D59119401C47001D9DBD /* phone1-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 8011D59019401C47001D9DBD /* phone1-25.png */; };
 		D69711B7193FB0D90092FA6D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69711B6193FB0D90092FA6D /* GoogleMaps.framework */; };
+		E21204D41B7073060028F57C /* message_button.png in Resources */ = {isa = PBXBuildFile; fileRef = E21204D31B7073060028F57C /* message_button.png */; };
 		E21CDE74191D47BF00884608 /* EventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E21CDE73191D47BF00884608 /* EventDataSource.m */; };
 		E220AD2A196C6AB00062BB40 /* CarlTermDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E220AD29196C6AB00062BB40 /* CarlTermDetailViewController.m */; };
 		E2217A8E19B552670017CBD4 /* calendarbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E2217A8D19B552670017CBD4 /* calendarbutton.png */; };
 		E2217A9219B5561E0017CBD4 /* notify.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2217A9119B5561E0017CBD4 /* notify.wav */; };
 		E2217A9419B565260017CBD4 /* mail icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2217A9319B565260017CBD4 /* mail icon.png */; };
 		E22D757A197EE0D30087AA70 /* FaqDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22D7579197EE0D30087AA70 /* FaqDetailViewController.m */; };
+		E22F57EF1B7AE4500003C644 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F57EE1B7AE4500003C644 /* MenuViewController.m */; };
+		E22F57F51B7B0E1D0003C644 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F57F41B7B0E1D0003C644 /* DayViewController.m */; };
+		E232A8271B5AD2FE009E3C98 /* StudentProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E232A8261B5AD2FE009E3C98 /* StudentProfileViewController.m */; };
+		E232A82A1B5B4C74009E3C98 /* StudentProfileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E232A8291B5B4C74009E3C98 /* StudentProfileDataSource.m */; };
+		E232A82D1B5C3AB2009E3C98 /* StudentProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E232A82C1B5C3AB1009E3C98 /* StudentProfileTableViewCell.m */; };
+		E232A82F1B5C7245009E3C98 /* SDA.csv in Resources */ = {isa = PBXBuildFile; fileRef = E232A82E1B5C7245009E3C98 /* SDA.csv */; };
 		E23BB81B1985AF8800CF20BC /* MapLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E23BB81A1985AF8800CF20BC /* MapLocation.m */; };
+		E25386521B6B046C0084CF4C /* StudentProfileDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25386511B6B046C0084CF4C /* StudentProfileDetailViewController.m */; };
+		E274B41D1B7ABB4000B7E9FB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E274B41C1B7ABB4000B7E9FB /* SWRevealViewController.m */; };
 		E277ED5A19858BCD00366C1B /* MapLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E277ED5919858BCD00366C1B /* MapLocationsTableViewController.m */; };
 		E277ED6019859A8400366C1B /* LocationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E277ED5F19859A8400366C1B /* LocationTableViewCell.m */; };
 		E27C227B197D7EC800126171 /* FaqDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E27C227A197D7EC800126171 /* FaqDataSource.m */; };
@@ -72,6 +78,12 @@
 		E2842AE7191A9992007FBD9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2842AC6191A9992007FBD9B /* UIKit.framework */; };
 		E2842AEF191A9992007FBD9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2842AED191A9992007FBD9B /* InfoPlist.strings */; };
 		E2842AF1191A9992007FBD9B /* NSWTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2842AF0191A9992007FBD9B /* NSWTests.m */; };
+		E28BE5111B7819AB00E7B2F5 /* ADPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E28BE50D1B7819AB00E7B2F5 /* ADPageControl.m */; };
+		E28BE5121B7819AB00E7B2F5 /* ADPageControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28BE50E1B7819AB00E7B2F5 /* ADPageControl.xib */; };
+		E28BE5131B7819AB00E7B2F5 /* ADPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E28BE5101B7819AB00E7B2F5 /* ADPageModel.m */; };
+		E28BE5161B7830F800E7B2F5 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28BE5151B7830F800E7B2F5 /* ScheduleViewController.m */; };
+		E2CA82FA1B58C5BD00827B93 /* stephen.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E2CA82F91B58C5BD00827B93 /* stephen.JPG */; };
+		E2CA82FD1B58C84100827B93 /* StudentSpecialist.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CA82FC1B58C84100827B93 /* StudentSpecialist.m */; };
 		E2DC71F419B54C1C00ED8C05 /* phone icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DC71F319B54C1C00ED8C05 /* phone icon.png */; };
 		E2DC71F619B54C2400ED8C05 /* menu_calendar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DC71F519B54C2400ED8C05 /* menu_calendar_icon.png */; };
 		E2DC71F819B54C5000ED8C05 /* NSW Splash Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = E2DC71F719B54C5000ED8C05 /* NSW Splash Screen.png */; };
@@ -100,11 +112,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DBA11891644C1A2292AD911 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		28585952FAF34AC6410D28E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2DBA12024D13496A05CB72A7 /* CarlTermTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarlTermTableViewCell.m; sourceTree = "<group>"; };
 		2DBA137AE7289011209C802F /* DataSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceManager.m; sourceTree = "<group>"; };
 		2DBA139D7276BDC39D4DB255 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
-		2DBA13A2ACE1AE8E36E36C90 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		2DBA1418FDE87099C2D4D6A4 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		2DBA146BBDAA372C1B5E4B37 /* FLDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLDownloadTask.m; sourceTree = "<group>"; };
 		2DBA14AC9697B76D6FF558C1 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
@@ -113,7 +124,6 @@
 		2DBA1774783673FD841ABF78 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		2DBA17E6D9786CA5BEA75130 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		2DBA188E05FA78B8CA88220B /* FLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloader.h; sourceTree = "<group>"; };
-		2DBA1955C9B983DEC4C57B77 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2DBA199D76F580210C9F3B13 /* BaseNSWTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNSWTableViewController.h; sourceTree = "<group>"; };
 		2DBA19B56A1927B2FA54136F /* FLDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDownloadTask.h; sourceTree = "<group>"; };
 		2DBA1A06EC33CED5D5EBDC66 /* DataSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceManager.h; sourceTree = "<group>"; };
@@ -121,13 +131,12 @@
 		2DBA1B37E9654BD4635896D1 /* NSWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWConstants.m; sourceTree = "<group>"; };
 		2DBA1C71116CB7163E1AC0A9 /* events_test.ics */ = {isa = PBXFileReference; lastKnownFileType = file.ics; path = events_test.ics; sourceTree = "<group>"; };
 		2DBA1D2363EB3A1744B9F1F9 /* NSWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSWConstants.h; sourceTree = "<group>"; };
-		2DBA1D9C44FC924E305DABBC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2DBA1DBB01806B9A766482F6 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
-		2DBA1E15920BCF66B29F9D24 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		2DBA1E9FDCADA3DDD5AC595A /* BaseNSWTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNSWTableViewController.m; sourceTree = "<group>"; };
 		2DBA1EE6E371CB5470BFB579 /* events.ics */ = {isa = PBXFileReference; lastKnownFileType = file.ics; path = events.ics; sourceTree = "<group>"; };
 		2DBA1F60FBF8244A097B7169 /* BaseNSWDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNSWDataSource.h; sourceTree = "<group>"; };
 		2DBA1FEB76C1602B32A6F545 /* CarlTermTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarlTermTableViewCell.h; sourceTree = "<group>"; };
+		42745AE395CA6BF8F5E7D067 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5BE2E3248EC341149C22A407 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6896DDE31921354D00570E6B /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		6896DDE41921354D00570E6B /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
@@ -151,8 +160,8 @@
 		8011D58C19400BB9001D9DBD /* clock-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock-25.png"; sourceTree = "<group>"; };
 		8011D58E19400C77001D9DBD /* alarm_clock-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_clock-25.png"; sourceTree = "<group>"; };
 		8011D59019401C47001D9DBD /* phone1-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1-25.png"; sourceTree = "<group>"; };
-		C06B0FA12298495BA45210A7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D69711B6193FB0D90092FA6D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		E21204D31B7073060028F57C /* message_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message_button.png; sourceTree = "<group>"; };
 		E21CDE72191D47BF00884608 /* EventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataSource.h; sourceTree = "<group>"; };
 		E21CDE73191D47BF00884608 /* EventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataSource.m; sourceTree = "<group>"; };
 		E220AD28196C6AB00062BB40 /* CarlTermDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarlTermDetailViewController.h; sourceTree = "<group>"; };
@@ -162,8 +171,22 @@
 		E2217A9319B565260017CBD4 /* mail icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail icon.png"; sourceTree = "<group>"; };
 		E22D7578197EE0D30087AA70 /* FaqDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaqDetailViewController.h; sourceTree = "<group>"; };
 		E22D7579197EE0D30087AA70 /* FaqDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaqDetailViewController.m; sourceTree = "<group>"; };
+		E22F57EE1B7AE4500003C644 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		E22F57F31B7B0E1D0003C644 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
+		E22F57F41B7B0E1D0003C644 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
+		E232A8251B5AD2FE009E3C98 /* StudentProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentProfileViewController.h; sourceTree = "<group>"; };
+		E232A8261B5AD2FE009E3C98 /* StudentProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentProfileViewController.m; sourceTree = "<group>"; };
+		E232A8281B5B4C74009E3C98 /* StudentProfileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentProfileDataSource.h; sourceTree = "<group>"; };
+		E232A8291B5B4C74009E3C98 /* StudentProfileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentProfileDataSource.m; sourceTree = "<group>"; };
+		E232A82B1B5C3AB1009E3C98 /* StudentProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentProfileTableViewCell.h; sourceTree = "<group>"; };
+		E232A82C1B5C3AB1009E3C98 /* StudentProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentProfileTableViewCell.m; sourceTree = "<group>"; };
+		E232A82E1B5C7245009E3C98 /* SDA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDA.csv; sourceTree = "<group>"; };
 		E23BB8191985AF8800CF20BC /* MapLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocation.h; sourceTree = "<group>"; };
 		E23BB81A1985AF8800CF20BC /* MapLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocation.m; sourceTree = "<group>"; };
+		E25386501B6B046C0084CF4C /* StudentProfileDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentProfileDetailViewController.h; sourceTree = "<group>"; };
+		E25386511B6B046C0084CF4C /* StudentProfileDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentProfileDetailViewController.m; sourceTree = "<group>"; };
+		E274B41B1B7ABB4000B7E9FB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		E274B41C1B7ABB4000B7E9FB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E277ED5819858BCD00366C1B /* MapLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocationsTableViewController.h; sourceTree = "<group>"; };
 		E277ED5919858BCD00366C1B /* MapLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocationsTableViewController.m; sourceTree = "<group>"; };
 		E277ED5E19859A8400366C1B /* LocationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTableViewCell.h; sourceTree = "<group>"; };
@@ -198,6 +221,16 @@
 		E2842AEC191A9992007FBD9B /* Carleton NSWTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Carleton NSWTests-Info.plist"; sourceTree = "<group>"; };
 		E2842AEE191A9992007FBD9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2842AF0191A9992007FBD9B /* NSWTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSWTests.m; sourceTree = "<group>"; };
+		E28BE50C1B7819AB00E7B2F5 /* ADPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageControl.h; sourceTree = "<group>"; };
+		E28BE50D1B7819AB00E7B2F5 /* ADPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageControl.m; sourceTree = "<group>"; };
+		E28BE50E1B7819AB00E7B2F5 /* ADPageControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADPageControl.xib; sourceTree = "<group>"; };
+		E28BE50F1B7819AB00E7B2F5 /* ADPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPageModel.h; sourceTree = "<group>"; };
+		E28BE5101B7819AB00E7B2F5 /* ADPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPageModel.m; sourceTree = "<group>"; };
+		E28BE5141B7830F800E7B2F5 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		E28BE5151B7830F800E7B2F5 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		E2CA82F91B58C5BD00827B93 /* stephen.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stephen.JPG; sourceTree = "<group>"; };
+		E2CA82FB1B58C84100827B93 /* StudentSpecialist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentSpecialist.h; sourceTree = "<group>"; };
+		E2CA82FC1B58C84100827B93 /* StudentSpecialist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSpecialist.m; sourceTree = "<group>"; };
 		E2DC71F319B54C1C00ED8C05 /* phone icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone icon.png"; sourceTree = "<group>"; };
 		E2DC71F519B54C2400ED8C05 /* menu_calendar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_calendar_icon.png; sourceTree = "<group>"; };
 		E2DC71F719B54C5000ED8C05 /* NSW Splash Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSW Splash Screen.png"; sourceTree = "<group>"; };
@@ -262,8 +295,8 @@
 		2DBA117A9E3FC69E8A187ED8 /* third-party */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA1E15920BCF66B29F9D24 /* SWRevealViewController.h */,
-				2DBA1D9C44FC924E305DABBC /* SWRevealViewController.m */,
+				E274B41B1B7ABB4000B7E9FB /* SWRevealViewController.h */,
+				E274B41C1B7ABB4000B7E9FB /* SWRevealViewController.m */,
 				2DBA188E05FA78B8CA88220B /* FLDownloader.h */,
 				2DBA174CF3B30C6834562744 /* FLDownloader.m */,
 				2DBA19B56A1927B2FA54136F /* FLDownloadTask.h */,
@@ -278,6 +311,8 @@
 			children = (
 				2DBA1774783673FD841ABF78 /* EventTableViewCell.h */,
 				2DBA1418FDE87099C2D4D6A4 /* EventTableViewCell.m */,
+				E232A82B1B5C3AB1009E3C98 /* StudentProfileTableViewCell.h */,
+				E232A82C1B5C3AB1009E3C98 /* StudentProfileTableViewCell.m */,
 				E27C2288197D888D00126171 /* FaqTableViewCell.h */,
 				E27C2289197D888D00126171 /* FaqTableViewCell.m */,
 				2DBA1FEB76C1602B32A6F545 /* CarlTermTableViewCell.h */,
@@ -290,6 +325,15 @@
 			path = ViewCells;
 			sourceTree = "<group>";
 		};
+		AAEC0DF6BC1B07033655302D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42745AE395CA6BF8F5E7D067 /* Pods.debug.xcconfig */,
+				28585952FAF34AC6410D28E0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E2842AB6191A9991007FBD9B = {
 			isa = PBXGroup;
 			children = (
@@ -297,8 +341,8 @@
 				E2842AEA191A9992007FBD9B /* NSWTests */,
 				E2842AC1191A9992007FBD9B /* Frameworks */,
 				E2842AC0191A9992007FBD9B /* Products */,
-				C06B0FA12298495BA45210A7 /* Pods.xcconfig */,
 				2DBA117A9E3FC69E8A187ED8 /* third-party */,
+				AAEC0DF6BC1B07033655302D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +384,7 @@
 		E2842AC8191A9992007FBD9B /* NSW */ = {
 			isa = PBXGroup;
 			children = (
+				E28BE50A1B7819AB00E7B2F5 /* ControlFiles */,
 				FA9DFDE31921C36900FC3A81 /* Common */,
 				FA9DFDE01921C2EC00FC3A81 /* DataSources */,
 				FA9DFDE11921C30F00FC3A81 /* Media */,
@@ -355,6 +400,8 @@
 		E2842AC9191A9992007FBD9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E21204D31B7073060028F57C /* message_button.png */,
+				E232A82E1B5C7245009E3C98 /* SDA.csv */,
 				E2217A9319B565260017CBD4 /* mail icon.png */,
 				E2217A9119B5561E0017CBD4 /* notify.wav */,
 				E2217A8D19B552670017CBD4 /* calendarbutton.png */,
@@ -393,6 +440,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E28BE50A1B7819AB00E7B2F5 /* ControlFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E28BE50B1B7819AB00E7B2F5 /* ADPageControl */,
+			);
+			path = ControlFiles;
+			sourceTree = "<group>";
+		};
+		E28BE50B1B7819AB00E7B2F5 /* ADPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				E28BE50C1B7819AB00E7B2F5 /* ADPageControl.h */,
+				E28BE50D1B7819AB00E7B2F5 /* ADPageControl.m */,
+				E28BE50E1B7819AB00E7B2F5 /* ADPageControl.xib */,
+				E28BE50F1B7819AB00E7B2F5 /* ADPageModel.h */,
+				E28BE5101B7819AB00E7B2F5 /* ADPageModel.m */,
+			);
+			path = ADPageControl;
+			sourceTree = "<group>";
+		};
 		FA9DFDDE1921C2BB00FC3A81 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +473,8 @@
 				FA9DFDED1922DB5800FC3A81 /* CarlTerm.m */,
 				E23BB8191985AF8800CF20BC /* MapLocation.h */,
 				E23BB81A1985AF8800CF20BC /* MapLocation.m */,
+				E2CA82FB1B58C84100827B93 /* StudentSpecialist.h */,
+				E2CA82FC1B58C84100827B93 /* StudentSpecialist.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -413,6 +482,8 @@
 		FA9DFDE01921C2EC00FC3A81 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				E232A8281B5B4C74009E3C98 /* StudentProfileDataSource.h */,
+				E232A8291B5B4C74009E3C98 /* StudentProfileDataSource.m */,
 				6896DDE51921354D00570E6B /* ContactDataSource.h */,
 				6896DDE61921354D00570E6B /* ContactDataSource.m */,
 				E27C2279197D7EC800126171 /* FaqDataSource.h */,
@@ -432,6 +503,7 @@
 		FA9DFDE11921C30F00FC3A81 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				E2CA82F91B58C5BD00827B93 /* stephen.JPG */,
 				68E045E2191FF6B100B36423 /* events_old.ics */,
 				FA9DFDDC1921BDD200FC3A81 /* map.jpg */,
 				2DBA139D7276BDC39D4DB255 /* reveal-icon.png */,
@@ -461,6 +533,10 @@
 				FA9DFDCE192166A000FC3A81 /* ContactTableViewController.m */,
 				E2841CBE195CA2F40082BDB2 /* ContactButton.h */,
 				E2841CBF195CA2F40082BDB2 /* ContactButton.m */,
+				E28BE5141B7830F800E7B2F5 /* ScheduleViewController.h */,
+				E28BE5151B7830F800E7B2F5 /* ScheduleViewController.m */,
+				E22F57F31B7B0E1D0003C644 /* DayViewController.h */,
+				E22F57F41B7B0E1D0003C644 /* DayViewController.m */,
 				E2842AD7191A9992007FBD9B /* EventListViewController.h */,
 				E2842AD8191A9992007FBD9B /* EventListViewController.m */,
 				E2842ADA191A9992007FBD9B /* EventDetailViewController.h */,
@@ -468,9 +544,11 @@
 				2DBA199D76F580210C9F3B13 /* BaseNSWTableViewController.h */,
 				2DBA1E9FDCADA3DDD5AC595A /* BaseNSWTableViewController.m */,
 				2DBA1B1FE18AB14237271000 /* MenuViewController.h */,
-				2DBA11891644C1A2292AD911 /* MenuViewController.m */,
-				2DBA1955C9B983DEC4C57B77 /* MapViewController.m */,
-				2DBA13A2ACE1AE8E36E36C90 /* MapViewController.h */,
+				E22F57EE1B7AE4500003C644 /* MenuViewController.m */,
+				E232A8251B5AD2FE009E3C98 /* StudentProfileViewController.h */,
+				E232A8261B5AD2FE009E3C98 /* StudentProfileViewController.m */,
+				E25386501B6B046C0084CF4C /* StudentProfileDetailViewController.h */,
+				E25386511B6B046C0084CF4C /* StudentProfileDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -571,13 +649,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9DFDDD1921BDD200FC3A81 /* map.jpg in Resources */,
+				E2CA82FA1B58C5BD00827B93 /* stephen.JPG in Resources */,
 				E2DC71F819B54C5000ED8C05 /* NSW Splash Screen.png in Resources */,
 				68E045E3191FF6B100B36423 /* events_old.ics in Resources */,
 				E2217A8E19B552670017CBD4 /* calendarbutton.png in Resources */,
 				E2DC71FE19B54C7200ED8C05 /* up arrow.png in Resources */,
 				E2DC71FA19B54C5700ED8C05 /* notification button blue.png in Resources */,
+				E28BE5121B7819AB00E7B2F5 /* ADPageControl.xib in Resources */,
 				E2842ADE191A9992007FBD9B /* Images.xcassets in Resources */,
 				E2DC71F619B54C2400ED8C05 /* menu_calendar_icon.png in Resources */,
+				E232A82F1B5C7245009E3C98 /* SDA.csv in Resources */,
 				E2DC71FC19B54C6600ED8C05 /* export button png.png in Resources */,
 				E2842ACD191A9992007FBD9B /* InfoPlist.strings in Resources */,
 				E2842AD6191A9992007FBD9B /* Main.storyboard in Resources */,
@@ -588,6 +669,7 @@
 				8011D58D19400BB9001D9DBD /* clock-25.png in Resources */,
 				2DBA1BF8815FA54720707B52 /* reveal-icon@2x.png in Resources */,
 				E2DC71F419B54C1C00ED8C05 /* phone icon.png in Resources */,
+				E21204D41B7073060028F57C /* message_button.png in Resources */,
 				2DBA12A52E9246896DE26E84 /* events.ics in Resources */,
 				2DBA1ECE9BB7E4234609C451 /* events_test.ics in Resources */,
 				FA36B635193FBABD0001C7E3 /* GoogleMaps.bundle in Resources */,
@@ -633,7 +715,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -646,10 +728,12 @@
 				FA9DFDE91922D77F00FC3A81 /* CarlTermDataSource.m in Sources */,
 				68E045E51920061700B36423 /* NSWEvent.m in Sources */,
 				E27C2284197D81A400126171 /* FaqItem.m in Sources */,
+				E232A82D1B5C3AB2009E3C98 /* StudentProfileTableViewCell.m in Sources */,
 				E23BB81B1985AF8800CF20BC /* MapLocation.m in Sources */,
 				FA9DFDCF192166A000FC3A81 /* ContactTableViewController.m in Sources */,
 				FA9DFDDB1921B9A400FC3A81 /* NSWStyle.m in Sources */,
 				E27C228D197D8E6600126171 /* FaqViewController.m in Sources */,
+				E28BE5131B7819AB00E7B2F5 /* ADPageModel.m in Sources */,
 				E2842AD3191A9992007FBD9B /* AppDelegate.m in Sources */,
 				E277ED6019859A8400366C1B /* LocationTableViewCell.m in Sources */,
 				FA9DFDEC1922D95400FC3A81 /* CarlTermViewController.m in Sources */,
@@ -657,28 +741,34 @@
 				E27C228A197D888D00126171 /* FaqTableViewCell.m in Sources */,
 				E2842ACF191A9992007FBD9B /* main.m in Sources */,
 				E27C227B197D7EC800126171 /* FaqDataSource.m in Sources */,
+				E232A8271B5AD2FE009E3C98 /* StudentProfileViewController.m in Sources */,
 				FA9DFDEE1922DB5800FC3A81 /* CarlTerm.m in Sources */,
 				6896DDE71921354D00570E6B /* Contact.m in Sources */,
+				E274B41D1B7ABB4000B7E9FB /* SWRevealViewController.m in Sources */,
 				6896DDE81921354D00570E6B /* ContactDataSource.m in Sources */,
 				E21CDE74191D47BF00884608 /* EventDataSource.m in Sources */,
 				E2DC720019B54CD100ED8C05 /* EventDetailViewController.m in Sources */,
 				E220AD2A196C6AB00062BB40 /* CarlTermDetailViewController.m in Sources */,
+				E28BE5161B7830F800E7B2F5 /* ScheduleViewController.m in Sources */,
+				E22F57EF1B7AE4500003C644 /* MenuViewController.m in Sources */,
 				2DBA1709FF76217A332E42CC /* BaseNSWDataSource.m in Sources */,
+				E28BE5111B7819AB00E7B2F5 /* ADPageControl.m in Sources */,
 				2DBA11AE1B9970A8E6772744 /* BaseNSWTableViewController.m in Sources */,
 				E2841CC0195CA2F40082BDB2 /* ContactButton.m in Sources */,
 				2DBA1128AA3820D3ACDF6DB2 /* NSWConstants.m in Sources */,
 				68EB9721193EAAE00045640B /* GoogleMapViewController.m in Sources */,
-				2DBA145C9F5E8FBDAF398B20 /* SWRevealViewController.m in Sources */,
-				2DBA1466DB064C56C6700DF2 /* MenuViewController.m in Sources */,
-				2DBA1BE3106731EC27A0A6BA /* MapViewController.m in Sources */,
 				2DBA1ED00471D28CA268FA58 /* EventTableViewCell.m in Sources */,
 				2DBA1DE1FBA75AE34934C6BC /* CarlTermTableViewCell.m in Sources */,
 				2DBA1ADD2D7E87F1AEA01F08 /* ContactTableViewCell.m in Sources */,
+				E22F57F51B7B0E1D0003C644 /* DayViewController.m in Sources */,
+				E25386521B6B046C0084CF4C /* StudentProfileDetailViewController.m in Sources */,
 				E22D757A197EE0D30087AA70 /* FaqDetailViewController.m in Sources */,
 				2DBA174E2354E5295C25AF96 /* FLDownloader.m in Sources */,
 				E277ED5A19858BCD00366C1B /* MapLocationsTableViewController.m in Sources */,
+				E2CA82FD1B58C84100827B93 /* StudentSpecialist.m in Sources */,
 				2DBA1604FAF3CAA6FA3288A8 /* FLDownloadTask.m in Sources */,
 				2DBA158FB79AE0291C63AD5A /* DataSourceManager.m in Sources */,
+				E232A82A1B5B4C74009E3C98 /* StudentProfileDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,10 +892,10 @@
 		};
 		E2842AF5191A9992007FBD9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C06B0FA12298495BA45210A7 /* Pods.xcconfig */;
+			baseConfigurationReference = 42745AE395CA6BF8F5E7D067 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -818,18 +908,20 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSW/Carleton NSW-Prefix.pch";
 				INFOPLIST_FILE = "NSW/Carleton NSW-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "Carleton NSW";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		E2842AF6191A9992007FBD9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C06B0FA12298495BA45210A7 /* Pods.xcconfig */;
+			baseConfigurationReference = 28585952FAF34AC6410D28E0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -842,8 +934,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSW/Carleton NSW-Prefix.pch";
 				INFOPLIST_FILE = "NSW/Carleton NSW-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "Carleton NSW";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

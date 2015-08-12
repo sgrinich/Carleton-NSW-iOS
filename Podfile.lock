@@ -9,8 +9,8 @@ DEPENDENCIES:
   - VCTransitionsLibrary (~> 1.4.0)
 
 SPEC CHECKSUMS:
-  AMScrollingNavbar: ff4d5a72b463eb03c764e91ac21312407d3bf6c6
+  AMScrollingNavbar: 66ef9b8d08da982b59bdfc39538ba401ec13b1c3
   iToast: 4de112d3dd42a3a8bf685572e6cda723c9cbc4f2
-  VCTransitionsLibrary: 0624c9163552cf5ded57f80f6285e20fa2863607
+  VCTransitionsLibrary: 7116e731880e745e4c92993daba587b7c48c18e0
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.38.0

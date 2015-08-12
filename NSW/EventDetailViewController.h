@@ -12,6 +12,6 @@
 @interface EventDetailViewController : UIViewController
 
 @property (strong, nonatomic) NSWEvent * detailItem;
-
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
 @end

@@ -26,29 +26,24 @@
 
     // Add gestures to return to current view by tapping or panning (dragging) the menu away
     [self.revealViewController tapGestureRecognizer];
-    //[self.revealViewController panGestureRecognizer];
+    [self.revealViewController panGestureRecognizer];
 
 
 
-   // SWRevealViewController *revealController =  [self revealViewController];
-    //[revealController panGestureRecognizer];
-    //[revealController tapGestureRecognizer];
     
-    self.menuIDs = @[@"events", @"map", @"terms", @"contacts",@"faq"];
-    self.menuTitles = @[@"Schedule", @"Campus Map", @"Speak Carleton", @"Important Contacts",@"FAQ"];
+    self.menuIDs = @[@"events", @"map", @"profiles", @"terms", @"contacts",@"faq"];
+    self.menuTitles = @[@"Schedule", @"Campus Map", @"Student Profiles", @"Speak Carleton", @"Important Contacts",@"FAQ"];
 }
 
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self.revealViewController.frontViewController.view setUserInteractionEnabled:NO];
 
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     //[super viewDidDisappear:animated];
-    
     [self.revealViewController.frontViewController.view setUserInteractionEnabled:YES];
 
 }
@@ -64,22 +59,22 @@
 {
     // configure the destination view controller:
 
-    // configure the segue.
-    if ( [segue isKindOfClass: [SWRevealViewControllerSegue class]] )
-    {
-        SWRevealViewControllerSegue *swRevealSegue = (SWRevealViewControllerSegue*) segue;
-
-        SWRevealViewController *revealVC = self.revealViewController;
-        NSAssert( revealVC != nil, @"oops! must have a revealViewController" );
-
-        NSAssert( [revealVC.frontViewController isKindOfClass: [UINavigationController class]], @"oops!  for this segue we want a permanent navigation controller in the front!" );
-
-        swRevealSegue.performBlock = ^(SWRevealViewControllerSegue* revealVCSegue, UIViewController* svc, UIViewController*destinationVC)
-        {
-            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:destinationVC];
-            [revealVC pushFrontViewController:navigationController animated:YES];
-        };
-    }
+//   //  configure the segue.
+//    if ( [segue isKindOfClass: [SWRevealViewControllerSeguePushController class]] )
+//    {
+//        SWRevealViewControllerSeguePushController *swRevealSegue = (SWRevealViewControllerSeguePushController*) segue;
+//
+//        SWRevealViewController *revealVC = self.revealViewController;
+//        NSAssert( revealVC != nil, @"oops! must have a revealViewController" );
+//
+//        NSAssert( [revealVC.frontViewController isKindOfClass: [UINavigationController class]], @"oops!  for this segue we want a permanent navigation controller in the front!" );
+//
+//        swRevealSegue.performBlock = ^(SWRevealViewControllerSeguePushController* revealVCSegue, UIViewController* svc, UIViewController*destinationVC)
+//        {
+//            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:destinationVC];
+//            [revealVC pushFrontViewController:navigationController animated:YES];
+//        };
+//    }
 }
 
 
@@ -95,8 +90,8 @@
     if (!menuHeaderView) {
         menuHeaderView = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:headerID];
         menuHeaderView.contentView.backgroundColor = [NSWStyle darkGrayColor]; //[NSWStyle lightBlueColor];
-        //menuHeaderView.textLabel.text = @"Carleton NSW";
-        //menuHeaderView.textLabel.textColor = [NSWStyle whiteColor];
+        menuHeaderView.textLabel.text = @"Carleton NSW";
+        menuHeaderView.textLabel.textColor = [NSWStyle whiteColor];
         //menuHeaderView.textLabel.font = [NSWStyle boldFont];
 
     }
@@ -104,6 +99,11 @@
 }
 
 #pragma mark - Table view
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

@@ -37,8 +37,17 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButtonItem setTarget: self.revealViewController];
+        [self.revealButtonItem setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 
+    [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    
     self.tableView.delaysContentTouches = NO;
     
     self.listItems = [[NSMutableArray alloc] init];
@@ -49,7 +58,6 @@
 }
 - (IBAction)phoneLabel:(id)sender {
     UIButton *button = (UIButton*)sender;
-
     NSString *promptprefix = @"tel://";
     NSString *callprompt = [promptprefix stringByAppendingString:button.currentTitle];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callprompt]];
@@ -63,6 +71,8 @@
     
     // Some cases exist where parsing cuts off "@carleton.edu" due to inconsistincies in HTML source. This is the fix.
     if([button.currentTitle rangeOfString:@"carleton.edu"].location !=NSNotFound){
+        NSString *stringWithEnd = [button.currentTitle stringByAppendingString:@"@carleton.edu"];
+        
         NSArray *toRecipents = [NSArray arrayWithObject:button.currentTitle];
         MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
         mc.mailComposeDelegate = self;
@@ -73,6 +83,13 @@
     }
     
     else{
+        NSArray *toRecipents = [NSArray arrayWithObject:button.currentTitle];
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setToRecipients:toRecipents];
+        
+        [self presentViewController:mc animated:YES completion:NULL];
+
         
     }
     

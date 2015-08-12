@@ -38,8 +38,17 @@ int selectedIndex;
     [super viewDidLoad];
     self.navigationItem.title = @"Speak Carleton";
     
-    [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButtonItem setTarget: self.revealViewController];
+        [self.revealButtonItem setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 
+    [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
 
     //Connect this VC to the shared DataSource
     [[[DataSourceManager sharedDSManager] getCarlTermDataSource] attachVCBackref:self];
@@ -62,7 +71,7 @@ int selectedIndex;
  Set selectedIndex to the clicked indexPath. [tableView begin/endUpdates] will reload view, calling heightForRowAtIndexPath. This sets the cell at selectedIndex to have a height 80
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
 
 

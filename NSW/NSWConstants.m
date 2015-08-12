@@ -26,11 +26,11 @@ static NSDateFormatter *dateFormatter;
 }
 
 + (NSDate *) firstDayOfNSW {
-    return [NSWConstants dateFor:@"09-09-2014"];
+    return [NSWConstants dateFor:@"08-09-2015"];
 }
 
 + (NSDate *) lastDayOfNSW {
-    return [NSWConstants dateFor:@"14-09-2014"];
+    return [NSWConstants dateFor:@"13-09-2015"];
 }
 
 

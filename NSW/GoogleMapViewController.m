@@ -13,6 +13,8 @@
 #import "MapLocationsTableViewController.h"
 
 @interface GoogleMapViewController ()
+@property (strong, nonatomic) IBOutlet UIView *viewContainer;
+@property (weak, nonatomic) IBOutlet UIView *viewLeftDummy;
 @property (nonatomic) IBOutlet UIBarButtonItem *revealButtonItem;
 @end
 
@@ -36,52 +38,73 @@
 {
     [super viewDidLoad];
     UIStoryboard *aStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    
     marker_ = nil;
-    
     mapView_ = [aStoryboard instantiateViewControllerWithIdentifier:@"gMap"];
     
     
     cameraPosition_ = [GMSCameraPosition cameraWithLatitude:44.461
                                                             longitude:-93.1546
                                                                  zoom:17];
-    
     int width = [UIScreen mainScreen].bounds.size.width;
     int height = [UIScreen mainScreen].bounds.size.height;
-    
     mapView_ = [GMSMapView mapWithFrame:CGRectMake(0, 0, width,height) camera:cameraPosition_];
     mapView_.myLocationEnabled = YES;
-    
-
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button addTarget:self
                action:@selector(buttonTouched)
      forControlEvents:UIControlEventTouchUpInside];
-    
-    
     [button setTitle:@"Looking for something?" forState:UIControlStateNormal];
     button.layer.cornerRadius = 10;
     button.clipsToBounds = YES;
     [button setTitleColor:[UIColor whiteColor]  forState:UIControlStateNormal];
     [button sizeToFit];
-    button.frame = CGRectMake(30, height-120, 260, 35);
+    button.frame = CGRectMake(30, height-120, width-60, 35);
     [button setBackgroundColor:[NSWStyle oceanBlueColor]];
     button.titleLabel.font = [UIFont fontWithName:@"Helvetica-Light" size:18];
-
+    
     [self.view insertSubview:button atIndex:1];
     [self.view insertSubview:mapView_ atIndex:0];
-    
-    
-    
-    
+    [self.view bringSubviewToFront:_viewContainer];
     self.navigationItem.title = @"Campus Map";
-    [self.revealButtonItem setTarget: self.revealViewController];
-    [self.revealButtonItem setAction: @selector( revealToggle: )];
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.revealButtonItem setTarget: self.revealViewController];
+        [self.revealButtonItem setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
+        mapView_.settings.consumesGesturesInView = NO;
+
+    }
+    
+//    [_viewContainer bringSubviewToFront:_viewLeftDummy];
+    self.view.userInteractionEnabled = YES;
+    
+    
+    
+
+
     [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+
+    
+    
+  //  [_viewContainer bringSubviewToFront:_viewLeftDummy];
+
     [self setNavigationColors];
     
 	
+}
+
+
+
+
+
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 -(void)buttonTouched{

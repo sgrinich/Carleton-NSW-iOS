@@ -14,17 +14,13 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *topContainer;
 @property (weak, nonatomic) IBOutlet UIButton *middleContainer;
-
-//@property (weak, nonatomic) IBOutlet UITextView *textDescription;
 @property (weak, nonatomic) IBOutlet UILabel *eventName;
 @property (weak, nonatomic) IBOutlet UILabel *eventLocation;
 @property (weak, nonatomic) IBOutlet UILabel *startTimeDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *notificationButton;
-
 @property int time;
 @property BOOL timeChosen;
 @property BOOL notificationSet;
-
 @property UILocalNotification *localNotification;
 @property NSDate *fireNotification;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
@@ -62,7 +58,6 @@
         _topContainer.layer.borderWidth = 0.25;
         _topContainer.layer.cornerRadius = 15;
         
-        
         [_eventDescription setScrollEnabled:YES];
         _eventDescription.layer.borderColor = [UIColor grayColor].CGColor;
         _eventDescription.layer.borderWidth = 0.25;
@@ -88,6 +83,7 @@
         
         NSString *startDateTimeString = [dateFormatter stringFromDate:[self.detailItem startDateTime]];
         NSDate *startDateTime = [self.detailItem startDateTime];
+        NSLog(startDateTimeString);
         NSDate *endDateTime = [self.detailItem endDateTime];
         
         // Remove "NSW: " from event title
@@ -215,6 +211,10 @@
         self.localNotification = [[UILocalNotification alloc] init];
         self.fireNotification = [self.detailItem startDateTime];
         self.localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        
+        
+
+
     }
     
     else{
@@ -240,6 +240,12 @@
     NSDate *now = [NSDate date];
     NSDate *startDateTime = [self.detailItem startDateTime];
     
+    UIAlertView *confirmAlert = [[UIAlertView alloc] initWithTitle:@"Great!"
+                                                    message:@"You'll be reminded about this event."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    
     
     if(buttonIndex == 0){
         
@@ -254,6 +260,9 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
+            
+            [confirmAlert show];
+
             
         }
         
@@ -284,6 +293,9 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
+            
+            [confirmAlert show];
+
         }
         
         else{
@@ -311,6 +323,9 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disable
+            
+            [confirmAlert show];
+
         }
         
         else{
@@ -338,6 +353,9 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
+            
+            [confirmAlert show];
+
         }
         
         else{
@@ -364,6 +382,7 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
+            [confirmAlert show];
         }
         
         else{
@@ -379,12 +398,9 @@
     }
     
     else{
-        //[[UIApplication sharedApplication] cancelAllLocalNotifications];
-
-
     }
     
-    //[[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
+
     
    
     

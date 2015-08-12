@@ -32,32 +32,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self displayDirectionsIfNewUser];
-
-
+    
     //Connect this VC to the shared DataSource
     myEventDS = [[DataSourceManager sharedDSManager] getEventDataSource];
 
-    
     NSDateComponents *comps = [[NSDateComponents alloc] init];
-    [comps setDay:9];
+    [comps setDay:8];
     [comps setMonth:9];
-    [comps setYear:2014];
+    [comps setYear:2015];
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *startDate = [gregorian dateFromComponents:comps];
     
     NSDateComponents *comps2 = [[NSDateComponents alloc] init];
-    [comps2 setDay:15];
+    [comps2 setDay:14];
     [comps2 setMonth:9];
-    [comps2 setYear:2014];
-    
+    [comps2 setYear:2015];
     NSDate *endDate = [gregorian dateFromComponents:comps2];
-    
-    
-    
-    
     
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -75,19 +67,12 @@
 
     
     [myEventDS attachVCBackref:self];
-    
     [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
 
-    
     UISwipeGestureRecognizer *oneFingerSwipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwipeLeft:)];
     UISwipeGestureRecognizer *oneFingerSwipeRight = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(oneFingerSwipeRight:)];
-    
-    
-    
     [oneFingerSwipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [[self view] addGestureRecognizer:oneFingerSwipeLeft];
-    
-    
     [oneFingerSwipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [[self view] addGestureRecognizer:oneFingerSwipeRight];
     
@@ -108,9 +93,6 @@
     
     // Changes "September 04" to "September 4" etc. for all dates. Doesn't matter for dates like "September 20" because NSW doesn't go that long
     NSString *currentDate = [current stringByReplacingOccurrencesOfString:@"0" withString:@""];
-    
-    // nav bar ex: "Saturday, Sep 13"
-    //currentDate = [NSString stringWithFormat:@"%@%@%@", dayName, @", ", currentDate];
     
     // nav bar ex: "Saturday"
     currentDate = [NSString stringWithFormat:@"%@", dayName];
@@ -135,22 +117,50 @@
 -(void)updateDateLabelToCurrentDate {
     NSDateFormatter *time = [[NSDateFormatter alloc] init];
     [time setDateFormat:@"MMM dd"];
-    
-    
     NSDateFormatter *dayOfWeek = [[NSDateFormatter alloc] init];
     [dayOfWeek setDateFormat:@"EEEE"];
     NSString *dayName = [dayOfWeek stringFromDate:currentDate];
-             
-    
-    
     NSString *current = [time stringFromDate:currentDate];
     NSString *currentDate = [current stringByReplacingOccurrencesOfString:@"0" withString:@""];
-                                  
-    currentDate = [NSString stringWithFormat:@"%@", dayName];
-                                  
-    self.navigationController.navigationBar.topItem.title = currentDate;
+    self.navigationController.navigationBar.topItem.title = [NSString stringWithFormat:@"%@", dayName];
     
 }
+
+
+
+// Updates currentDate then the list of events to one day after the previous day
+- (void)oneFingerSwipeLeft:(UITapGestureRecognizer *)recognizer {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
+    NSString *currentDateString =[formatter stringFromDate:currentDate];
+    NSString *toDateString = [formatter stringFromDate:[NSWConstants lastDayOfNSW]];
+    if (![currentDateString isEqualToString:toDateString]) {
+        [self.tableView setContentOffset:CGPointZero animated:NO];
+        currentDate = [EventDataSource oneDayAfter:currentDate];
+        [self getEventsFromCurrentDate];
+        [self updateDateLabelToCurrentDate];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
+    }
+}
+
+// Updates currentDate then the list of events to one day before the previous day
+- (void)oneFingerSwipeRight:(UITapGestureRecognizer *)recognizer {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"YYYY-MM-dd"];
+        NSString *currentDateString =[formatter stringFromDate:currentDate];
+        NSString *toDateString = [formatter stringFromDate:[NSWConstants firstDayOfNSW]];
+        if (![currentDateString isEqualToString:toDateString]) {
+            [self.tableView setContentOffset:CGPointZero animated:NO];
+            currentDate = [EventDataSource oneDayBefore:currentDate];
+            [self getEventsFromCurrentDate];
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
+            [self updateDateLabelToCurrentDate];
+        }
+}
+
+
+
+
 
 // Checks the user defaults and shows directions if this is a first user
 -(void)displayDirectionsIfNewUser {
@@ -166,73 +176,23 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
-
+        
         [userDefaults setBool:YES forKey:returningUserKey];
     } else {
         //[userDefaults setBool:NO forKey:returningUserKey];
     }
 }
 
-// Updates currentDate then the list of events to one day after the previous day
-- (void)oneFingerSwipeLeft:(UITapGestureRecognizer *)recognizer {
-    //TODO Nice-to-have: animation with swipe so that it's less of a sudden change
-    NSLog(@"LEFT");
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
-    NSLog([formatter stringFromDate:currentDate]);
-    NSLog([formatter stringFromDate:[NSWConstants firstDayOfNSW]]);
-
-    NSString *currentDateString =[formatter stringFromDate:currentDate];
-    NSString *toDateString = [formatter stringFromDate:[NSWConstants lastDayOfNSW]];
-    
-    if (![currentDateString isEqualToString:toDateString]) {
-        [self.tableView setContentOffset:CGPointZero animated:NO];
-        currentDate = [EventDataSource oneDayAfter:currentDate];
-        [self getEventsFromCurrentDate];
-        [self updateDateLabelToCurrentDate];
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationLeft];
-        
-    }
-}
-
-// Updates currentDate then the list of events to one day before the previous day
-- (void)oneFingerSwipeRight:(UITapGestureRecognizer *)recognizer {
-    NSLog(@"RIGHT");
-    
-    
-    
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"YYYY-MM-dd"];
-        NSString *currentDateString =[formatter stringFromDate:currentDate];
-        NSLog(currentDateString);
-    
-        NSString *toDateString = [formatter stringFromDate:[NSWConstants firstDayOfNSW]];
-    
-        if (![currentDateString isEqualToString:toDateString]) {
-            [self.tableView setContentOffset:CGPointZero animated:NO];
-            currentDate = [EventDataSource oneDayBefore:currentDate];
-            [self getEventsFromCurrentDate];
-            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
-            [self updateDateLabelToCurrentDate];
-
-        }
-        
-    
-    
-}
-
-
 
 - (IBAction)calendarButton:(id)sender {
         
     UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Select a day to jump to" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
-                           @"Tuesday, September 9",
-                           @"Wednesday, September 10",
-                           @"Thursday, September 11",
-                           @"Friday, September 12",
-                           @"Saturday, September 13",
-                           @"Sunday, September 14",
+                           @"Tuesday, September 8",
+                           @"Wednesday, September 9",
+                           @"Thursday, September 10",
+                           @"Friday, September 11",
+                           @"Saturday, September 12",
+                           @"Sunday, September 13",
                            nil];
     popup.tag = 1;
     [popup showInView:[UIApplication sharedApplication].keyWindow];
@@ -249,7 +209,7 @@
 
     
     if(buttonIndex == 0){
-        dateString = @"2014-09-09";
+        dateString = @"2015-09-08";
         [self.tableView setContentOffset:CGPointZero animated:NO];
         currentDate = [formatter dateFromString:dateString];
         [self getEventsFromCurrentDate];
@@ -259,7 +219,7 @@
     }
     
     if(buttonIndex == 1){
-        dateString = @"2014-09-10";
+        dateString = @"2015-09-09";
         [self.tableView setContentOffset:CGPointZero animated:NO];
         currentDate = [formatter dateFromString:dateString];
         [self getEventsFromCurrentDate];
@@ -269,7 +229,7 @@
     }
     
     if(buttonIndex == 2){
-        dateString = @"2014-09-11";
+        dateString = @"2015-09-10";
         [self.tableView setContentOffset:CGPointZero animated:NO];
         currentDate = [formatter dateFromString:dateString];
         [self getEventsFromCurrentDate];
@@ -278,7 +238,7 @@
     }
     
     if(buttonIndex == 3){
-        dateString = @"2014-09-12";
+        dateString = @"2015-09-11";
         [self.tableView setContentOffset:CGPointZero animated:NO];
         currentDate = [formatter dateFromString:dateString];
         [self getEventsFromCurrentDate];
@@ -287,7 +247,7 @@
     }
     
     if(buttonIndex == 4){
-        dateString = @"2014-09-13";
+        dateString = @"2015-09-12";
         [self.tableView setContentOffset:CGPointZero animated:NO];
         currentDate = [formatter dateFromString:dateString];
         [self getEventsFromCurrentDate];
@@ -296,7 +256,7 @@
     }
     
     if(buttonIndex == 5){
-        dateString = @"2014-09-14";
+        dateString = @"2015-09-13";
         [self.tableView setContentOffset:CGPointZero animated:NO];
         currentDate = [formatter dateFromString:dateString];
         [self getEventsFromCurrentDate];

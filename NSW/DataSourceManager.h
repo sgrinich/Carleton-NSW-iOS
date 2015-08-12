@@ -8,6 +8,7 @@
 #import "ContactDataSource.h"
 #import "CarlTermDataSource.h"
 #import "FaqDataSource.h"
+#import "StudentProfileDataSource.h"
 
 
 @interface DataSourceManager : NSObject
@@ -18,5 +19,6 @@
 -(ContactDataSource *) getContactDataSource;
 -(CarlTermDataSource *) getCarlTermDataSource;
 -(FaqDataSource *) getFaqDataSource;
+-(StudentProfileDataSource *) getStudentProfileDataSource;
 
 @end

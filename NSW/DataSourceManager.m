@@ -12,6 +12,7 @@
     @property ContactDataSource *contactDataSource;
     @property CarlTermDataSource *carlTermDataSource;
     @property FaqDataSource *faqDataSource;
+    @property StudentProfileDataSource *studentProfileDataSource;
 @end
 
 
@@ -42,6 +43,7 @@ static DataSourceManager *sharedDSManager = nil;
         self.contactDataSource = [[ContactDataSource alloc] init];
         self.carlTermDataSource = [[CarlTermDataSource alloc] init];
         self.faqDataSource = [[FaqDataSource alloc] init];
+        self.studentProfileDataSource = [[StudentProfileDataSource alloc] init];
     }
     return self;
 }
@@ -69,4 +71,9 @@ static DataSourceManager *sharedDSManager = nil;
 - (FaqDataSource *)getFaqDataSource {
     return self.faqDataSource;
 }
+
+- (StudentProfileDataSource *)getStudentProfileDataSource{
+    return self.studentProfileDataSource;
+}
+
 @end

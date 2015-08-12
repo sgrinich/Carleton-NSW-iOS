@@ -22,12 +22,13 @@ static BOOL dataIsReady;
 // Maps what URL corresponds to which local file name
 - (id)urlMap {
     if (!_urlMap) {
-        NSArray *fileNames = @[@"events.ics", @"contacts.html", @"terms.json",@"faq.html"];
-        NSArray *urls = @[[NSURL URLWithString:@"https://apps.carleton.edu/newstudents/events/?start_date=2014-08-21&format=ical"],
+        NSArray *fileNames = @[@"events.ics", @"contacts.html", @"terms.json", @"faq.html"];
+        
+        NSArray *urls = @[[NSURL URLWithString:@"https://apps.carleton.edu/newstudents/events/?start_date=2015-08-05&format=ical"],
                 [NSURL URLWithString:@"https://apps.carleton.edu/newstudents/contact/"],
                 [NSURL URLWithString:@"http://sgrinich.github.io/speak_carleton.json"],
-                // added this here
-                [NSURL URLWithString:@"https://apps.carleton.edu/newstudents/contact/faq/#site_index"]];
+                [NSURL URLWithString:@"http://apps.carleton.edu/newstudents/contact/faq/#site_index"]];
+        
         _urlMap = [NSDictionary dictionaryWithObjects:urls forKeys:fileNames];
         if (_urlMap.count != urls.count) {
             NSLog(@"Have %d URLs, but have %d entries in urlMap", urls.count, _urlMap.count);
@@ -45,7 +46,6 @@ static BOOL dataIsReady;
 
 - (id)initWithDataFromFile:(NSString *)localName {
     self = [self initPrivate];
-
     if (self) {
         myTableViewController = nil;
         NSURL *remoteURL = [self.urlMap objectForKey:localName];
