@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DayViewController.h"
 
-@interface ScheduleViewController : UIViewController
 
+@interface ScheduleViewController : UIViewController <DayViewControllerDelegate>
 
 @end

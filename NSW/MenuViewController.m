@@ -28,22 +28,26 @@
     [self.revealViewController tapGestureRecognizer];
     [self.revealViewController panGestureRecognizer];
 
-
-
+    self.revealViewController.frontViewShadowOffset = CGSizeMake(0, 0);
+    self.revealViewController.frontViewShadowOpacity = 0.0f;
+    self.revealViewController.frontViewShadowRadius = 0.0f;
     
     self.menuIDs = @[@"events", @"map", @"profiles", @"terms", @"contacts",@"faq"];
-    self.menuTitles = @[@"Schedule", @"Campus Map", @"Student Profiles", @"Speak Carleton", @"Important Contacts",@"FAQ"];
+    self.menuTitles = @[@"Schedule", @"Campus Map", @"Student Dept. Advisers", @"Speak Carleton", @"Important Contacts",@"FAQ"];
 }
 
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     [self.revealViewController.frontViewController.view setUserInteractionEnabled:NO];
 
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     //[super viewDidDisappear:animated];
+    
     [self.revealViewController.frontViewController.view setUserInteractionEnabled:YES];
 
 }

@@ -12,4 +12,5 @@
 
 @interface ContactTableViewController : BaseNSWTableViewController
 
+
 @end

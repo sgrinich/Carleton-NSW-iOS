@@ -15,7 +15,7 @@
 NSMutableArray *profilesArrray;
 
 - (id)init {
-    //self = [super initWithDataFromFile:@"SDA.csv"];
+    self = [super initWithDataFromFile:@"StudentProfiles.txt"];
     
     [self parseDataIntoProfiles];
     
@@ -23,24 +23,60 @@ NSMutableArray *profilesArrray;
 }
 
 
-//- (void)parseLocalData{
-//    [self parseDataIntoProfiles];
-//    [super parseLocalData];
-//}
+
+- (void)parseLocalData{
+    [self parseDataIntoProfiles];
+    [super parseLocalData];
+}
 
 -(void) parseDataIntoProfiles{
     
-    NSLog(@"parseDataIntoProfiles starts ");
     
     profilesArrray = [[NSMutableArray alloc]init];
     
-//    NSString *rawProfiles = [[NSString alloc] initWithData:self.localData encoding:NSUTF8StringEncoding];
-//    NSString *file = [[NSString alloc] initWithContentsOfFile:@"SDA.csv"];
-//    NSArray *allLines = [file componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-//    
-    StudentSpecialist *student = [[StudentSpecialist alloc] initWithProfile:@"Stephen Grinich" Bio:@"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda." Number:@"555-237-4708" Email:@"grinichs@carlton.edu" Major:@"Computer Science"];
+    NSString *csvFile = [[NSString alloc] initWithData:self.localData encoding:NSUTF8StringEncoding];
+
     
-    [profilesArrray addObject:student];
+    NSArray *allLines = [csvFile componentsSeparatedByString:@"\n"];
+    
+    NSString *name = [[NSString alloc]init];
+    NSString *major = [[NSString alloc]init];
+    NSString *email = [[NSString alloc]init];
+    NSString *phoneNumber = [[NSString alloc]init];
+
+    for (NSString* line in allLines) {
+        NSArray *elements = [line componentsSeparatedByString:@","];
+        
+        if([elements count]>1){
+        
+        name = [elements objectAtIndex:0];
+        major = [elements objectAtIndex:1];
+        email = [[elements objectAtIndex:2] stringByAppendingString:@"@carleton.edu"];
+        phoneNumber = [[[elements objectAtIndex:3] componentsSeparatedByCharactersInSet:
+                        [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                       componentsJoinedByString:@""];
+          
+        NSMutableString *bio = [[NSMutableString alloc]init];
+    
+        for(int i = 4; i<[elements count]; i++) {
+            if ((i != [elements count]) && (i != 4)){
+                [bio appendString:@","];
+            }
+            [bio appendString:[elements objectAtIndex:i]];
+        }
+            
+            if([bio hasPrefix:@"\""]){
+                bio = [bio substringFromIndex:1];
+            }
+            
+            if([bio hasSuffix:@"\""]){
+                bio = [bio substringToIndex:[bio length] -1];
+            }
+        
+            StudentSpecialist *student = [[StudentSpecialist alloc] initWithProfile:name Bio:bio Number:phoneNumber Email:email Major:major];
+            [profilesArrray addObject:student];
+         }
+    }
     
     if (myTableViewController != nil) {
         [myTableViewController setVCArrayToDataSourceArray:profilesArrray];

@@ -87,6 +87,7 @@ NSMutableArray *parsedContacts;
     NSString *phone = [self parsePhoneNumberFromLine:contactLines[1] withPrefix:@"Phone:"];
     NSString *fax = nil;
     NSString *email = nil;
+    
 
     // Some contacts don't have a fax number
     if (contactLines.count == 3) {
@@ -96,7 +97,8 @@ NSMutableArray *parsedContacts;
         if([email rangeOfString:@"@carleton.edu"].location == NSNotFound){
             email = [email stringByAppendingString:@"@carleton.edu"];
         }
-            
+        
+    
     }
     
     else if (contactLines.count == 4) {
@@ -104,7 +106,7 @@ NSMutableArray *parsedContacts;
         email = [self parseEmailLine:contactLines[3]];
     }
     
-    // Need this because HTML formatting at source page is bizarre
+    // We do this because the SAO sometimes has bugs in their email formatting. So, whenever you get a phone or email crash it's probably because of this. 
     if([title isEqualToString:@"OneCard"]){
         email = @"onecard@carleton.edu";
     }
@@ -113,7 +115,14 @@ NSMutableArray *parsedContacts;
         email = @"ckoen@carleton.edu";
     }
 
-
+    if([title isEqualToString:@"Athletics"]){
+        email = @"athlete@carleton.edu";
+    }
+    
+    if([title isEqualToString:@"Human Resources"]){
+        email = @"hr@carleton.edu";
+    }
+    
     return [[Contact alloc] initWithTitle:title Phone:phone Fax:fax Email:email];
 }
 

@@ -9,6 +9,7 @@
 #import "EventDetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
 //#import "NSWEvent.h"
+#import "Mixpanel.h"
 
 @interface EventDetailViewController ()
 
@@ -33,14 +34,24 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(NSWEvent *)newDetailItem
+//- (void)setDetailItem:(NSWEvent *)newDetailItem
+//{
+//    if (_detailItem != newDetailItem) {
+//        _detailItem = newDetailItem;
+//        
+//        // Update the view.
+//        [self configureView];
+//    }
+//}
+
+- (id)initWithEvent:(NSWEvent *)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
+    self = [super initWithNibName:@"EventDetailViewController" bundle:nil];
+    if(self) {
         _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
+        //[self configureView];
     }
+    return self;
 }
 
 
@@ -52,6 +63,8 @@
     
 
     if (self.detailItem) {
+        
+        
         
 
         _topContainer.layer.borderColor = [UIColor grayColor].CGColor;
@@ -138,6 +151,14 @@
 
         _titleBar.title = @"Event";
         
+        
+        
+        
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
+        [mixpanel track:@"Event Detail View" properties:@{
+                                                       @"Event Title": eventNameString
+                                                       }];
+        
     }
 }
 
@@ -151,11 +172,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+    
+   
+    
     self.wantsFullScreenLayout = YES;
     
 	// Do any additional setup after loading the view, typically from a nib.
     
+
     [self configureView];
 }
 
@@ -173,31 +197,23 @@
 }
 
 - (IBAction)notifyButton:(id)sender {
-    // Right now, notifications will display automatically because the NSW data we're using is from 2012 and that's in the past. Once
-    // 2014 NSW data is used, notifications will work properly
-    
-    
-    
-    // get day of event
-    // if day of event is in pass, don't allow notification to be pressed
-    // popup box saying 'that's already happened'
-    
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     [dateFormatter setDateFormat:@"MMMM d"];
-    NSString *startDateTimeString = [dateFormatter stringFromDate:[self.detailItem startDateTime]];
-    NSLog(startDateTimeString);
-    
-    
-    
     NSDate *now = [NSDate date];
     NSDate *startDateTime = [self.detailItem startDateTime];
     
-    
     if([now compare:startDateTime] ==  NSOrderedAscending){
         
-        UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"How far ahead would you like to be notified?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+        
+        if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+            [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge
+                                                                                                                  categories:nil]];
+        }
+        
+        
+        UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"How far ahead would you like to be reminded?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
                                 @"5 Minutes",
                                 @"15 Minutes",
                                 @"30 Minutes",
@@ -234,6 +250,8 @@
 
 // Options presented when selecting a notification time
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+
     
     
     
@@ -241,13 +259,16 @@
     NSDate *startDateTime = [self.detailItem startDateTime];
     
     UIAlertView *confirmAlert = [[UIAlertView alloc] initWithTitle:@"Great!"
-                                                    message:@"You'll be reminded about this event."
+                                                    message:@"You'll be reminded about this event. Make sure notifications are enabled on your device."
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     
     
     if(buttonIndex == 0){
+        
+
+        
         
         // 5 minutes before event starts
         NSTimeInterval secondsInFiveMinutes =  -5 * 60;
@@ -261,7 +282,12 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
             
+            [mixpanel track:@"Event Detail View" properties:@{
+                                                           @"Notification Time Before Event": @"5 Minutes"
+                                                           }];
+            
             [confirmAlert show];
+
 
             
         }
@@ -272,6 +298,7 @@
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
+            
             [alert show];
         }
         
@@ -294,7 +321,12 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
             
+            [mixpanel track:@"Event Detail View" properties:@{
+                                                           @"Notification Time Before Event": @"15 Minutes"
+                                                           }];
+            
             [confirmAlert show];
+            
 
         }
         
@@ -304,6 +336,7 @@
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
+            
             [alert show];
         }
         
@@ -324,6 +357,10 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disable
             
+            [mixpanel track:@"Event Detail View" properties:@{
+                                                           @"Notification Time Before Event": @"30 Minutes"
+                                                           }];
+            
             [confirmAlert show];
 
         }
@@ -334,6 +371,7 @@
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
+            
             [alert show];
         }
         
@@ -353,6 +391,10 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
+            
+            [mixpanel track:@"Event Detail View" properties:@{
+                                                           @"Notification Time Before Event": @"1 Hour"
+                                                           }];
             
             [confirmAlert show];
 
@@ -382,6 +424,10 @@
             self.localNotification.soundName = @"notify.wav";
             [[UIApplication sharedApplication] scheduleLocalNotification:self.localNotification];
             [_notificationButton setEnabled:NO]; // To toggle enabled / disabled
+            
+            [mixpanel track:@"Event Detail View" properties:@{
+                                                           @"Notification Time Before Event": @"1 Day"
+                                                           }];
             [confirmAlert show];
         }
         

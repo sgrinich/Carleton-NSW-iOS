@@ -10,11 +10,22 @@
 
 @implementation EventTableViewCell
 
+@synthesize eventTimeLabel;
+@synthesize eventNameLabel;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.eventTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 5, 300, 30)];
+        self.eventTimeLabel.font = [UIFont fontWithName:@"Arial" size:25.0f];
+        
+        self.eventNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 40, 300, 30)];
+        self.eventNameLabel.font = [UIFont fontWithName:@"Ariel" size:25.0f];
+        
+        [self addSubview:self.eventTimeLabel];
+        [self addSubview:self.eventNameLabel];
+
     }
     return self;
 }

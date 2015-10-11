@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "997FA5E78C455B640DCA27F1C979B78D2CAD24B6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "997FA5E78C455B640DCA27F1C979B78D2CAD24B6" : 0,
+    "96E37D88224941A3984802BE289D8FE65093E02B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A2726F66-F771-4999-9976-7C4D41EF0131",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "997FA5E78C455B640DCA27F1C979B78D2CAD24B6" : "New%20Student%20Week%20App",
+    "96E37D88224941A3984802BE289D8FE65093E02B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NSW",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NSW.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sgrinich\/NSW-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "96E37D88224941A3984802BE289D8FE65093E02B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sgrinich\/Carleton-NSW-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "997FA5E78C455B640DCA27F1C979B78D2CAD24B6"
+    }
+  ]
+}

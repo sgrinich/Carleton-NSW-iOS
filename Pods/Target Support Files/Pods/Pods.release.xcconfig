@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AMScrollingNavbar" "${PODS_ROOT}/Headers/Public/VCTransitionsLibrary" "${PODS_ROOT}/Headers/Public/iToast"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AMScrollingNavbar" -isystem "${PODS_ROOT}/Headers/Public/VCTransitionsLibrary" -isystem "${PODS_ROOT}/Headers/Public/iToast"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AMScrollingNavbar" -l"VCTransitionsLibrary" -l"iToast"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AMScrollingNavbar" "${PODS_ROOT}/Headers/Public/Mixpanel" "${PODS_ROOT}/Headers/Public/VCTransitionsLibrary" "${PODS_ROOT}/Headers/Public/iToast"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AMScrollingNavbar" -isystem "${PODS_ROOT}/Headers/Public/Mixpanel" -isystem "${PODS_ROOT}/Headers/Public/VCTransitionsLibrary" -isystem "${PODS_ROOT}/Headers/Public/iToast"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AMScrollingNavbar" -l"Mixpanel" -l"VCTransitionsLibrary" -l"iToast" -l"icucore" -framework "Accelerate" -framework "CoreGraphics" -framework "CoreTelephony" -framework "Foundation" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit"
 PODS_ROOT = ${SRCROOT}/Pods

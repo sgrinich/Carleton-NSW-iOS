@@ -14,6 +14,9 @@
 #import "DataSourceManager.h"
 #import "CarlTermDetailViewController.h"
 #import "SWRevealViewController.h"
+#import "KLCPopup.h"
+#import "Mixpanel.h"
+#import "NSWStyle.h"
 
 @interface CarlTermViewController (){
 }
@@ -37,6 +40,14 @@ int selectedIndex;
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Speak Carleton";
+    
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [NSWStyle oceanBlueColor];
+    [self.tableView setBackgroundView:view];
+    
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    
     
     
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -72,26 +83,71 @@ int selectedIndex;
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
-
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
     
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     CarlTerm *term = self.listItems[(NSUInteger) indexPath.row];
-    CarlTermDetailViewController *destViewController = segue.destinationViewController;
+
     
-    if ([[segue identifier] isEqualToString:@"showTermDetail"]) {
-        
-        destViewController.termName = [term abbreviation];
-        destViewController.termDescription = [term longName]; 
-        
-        
-    }
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Carlterm View" properties:@{
+                                                    @"Term Selected": [term abbreviation]
+                                                    }];
+    
+    
+        UIView* contentView = [self getTermView:term];    
+        KLCPopup* popup = [KLCPopup popupWithContentView:contentView];
+        [popup show];
+
 }
 
+
+-(UIView *)getTermView:(CarlTerm *)term{
+    UIView* termView = [[UIView alloc] init];
+    
+    termView.backgroundColor = [NSWStyle grayColor];
+    termView.layer.cornerRadius = 20;
+    
+    //NSLog(@"width: %f",self.view.frame.size.width);
+    termView.frame = CGRectMake(0.0, 0.0, self.view.frame.size.width - 40, self.view.frame.size.height/2 + 30);
+    
+    UILabel *termName = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, termView.frame.size.width - 10, 40)];
+    termName.font = [UIFont fontWithName:@"Helvetica" size:36];
+    termName.textColor = [NSWStyle darkBlueColor];
+    termName.textAlignment = NSTextAlignmentCenter;
+    termName.text = [term abbreviation];
+    
+    UITextView *termDescription = [[UITextView alloc] initWithFrame:CGRectMake(20, termName.frame.origin.y + 45, termView.frame.size.width - 30, termView.frame.size.height - 85)];
+    termDescription.font = [UIFont fontWithName:@"Helvetica" size:18];
+    termDescription.text = [term longName];
+    termDescription.backgroundColor = [NSWStyle grayColor];
+    termDescription.editable = NO; 
+
+    
+    [termView addSubview:termName];
+    [termView addSubview:termDescription];
+    return termView;
+}
+
+
+
+
+
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    
+//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//    CarlTerm *term = self.listItems[(NSUInteger) indexPath.row];
+//    CarlTermDetailViewController *destViewController = segue.destinationViewController;
+//    
+//    if ([[segue identifier] isEqualToString:@"showTermDetail"]) {
+//        
+//        destViewController.termName = [term abbreviation];
+//        destViewController.termDescription = [term longName]; 
+//        
+//        
+//    }
+//}
+//
 
 
 

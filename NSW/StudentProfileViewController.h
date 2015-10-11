@@ -12,5 +12,9 @@
 
 @interface StudentProfileViewController : BaseNSWTableViewController
 
+@property (nonatomic, retain) NSMutableArray *cellIconNames;
+@property (nonatomic, weak) NSString *imageName;
+@property (nonatomic, retain) NSString *fileName;
+
 
 @end

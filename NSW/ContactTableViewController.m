@@ -16,6 +16,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ContactButton.h"
 #import "SWRevealViewController.h"
+#import "Mixpanel.h"
+#import "NSWStyle.h"
 
 @interface ContactTableViewController ()
 
@@ -37,6 +39,14 @@
 {
     [super viewDidLoad];
     
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [NSWStyle oceanBlueColor];
+    [self.tableView setBackgroundView:view];
+    
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -57,7 +67,18 @@
 
 }
 - (IBAction)phoneLabel:(id)sender {
+    
+    
+    
+    
     UIButton *button = (UIButton*)sender;
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Important Contacts" properties:@{
+                                                       @"Contact Called": button.currentTitle
+                                                       }];
+    
+    
     NSString *promptprefix = @"tel://";
     NSString *callprompt = [promptprefix stringByAppendingString:button.currentTitle];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callprompt]];
@@ -68,6 +89,11 @@
 - (IBAction)emailLabel:(id)sender {
     
     UIButton *button = (UIButton*)sender;
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Important Contacts" properties:@{
+                                                       @"Contact Emailed": button.currentTitle
+                                                       }];
     
     // Some cases exist where parsing cuts off "@carleton.edu" due to inconsistincies in HTML source. This is the fix.
     if([button.currentTitle rangeOfString:@"carleton.edu"].location !=NSNotFound){

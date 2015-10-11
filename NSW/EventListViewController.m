@@ -34,7 +34,6 @@
     [super viewDidLoad];
     [self displayDirectionsIfNewUser];
     
-    //Connect this VC to the shared DataSource
     myEventDS = [[DataSourceManager sharedDSManager] getEventDataSource];
 
     NSDateComponents *comps = [[NSDateComponents alloc] init];
@@ -288,6 +287,7 @@
 
 
 - (EventTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSWEvent *event = self.listItems[(NSUInteger) indexPath.row];
@@ -319,8 +319,8 @@
         startEnd = [NSString stringWithFormat:@"%@ - %@", startTime, endTime];
     }
     
-    cell.startEndLabel.text = startEnd;
-    cell.startEndLabel.textColor = [NSWStyle darkBlueColor];
+//    cell.startEndLabel.text = startEnd;
+//    cell.startEndLabel.textColor = [NSWStyle darkBlueColor];
     
     
     // Remove "NSW: " from event title
@@ -332,8 +332,8 @@
     
     
     
-    cell.eventNameLabel.text = eventNameString;
-    cell.eventNameLabel.textColor = [NSWStyle darkBlueColor];
+//    cell.eventNameLabel.text = eventNameString;
+//    cell.eventNameLabel.textColor = [NSWStyle darkBlueColor];
     
     return cell;
 }

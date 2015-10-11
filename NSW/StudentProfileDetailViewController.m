@@ -11,39 +11,48 @@
 #import "NSWStyle.h"
 #import "DataSourceManager.h"
 #import <MessageUI/MessageUI.h>
+#import "Mixpanel.h"
 
 
-@implementation StudentProfileDetailViewController
+
+@implementation StudentProfileDetailViewController 
 
 @synthesize studentName;
 @synthesize studentMajor;
 @synthesize studentBio;
 @synthesize studentPhoneNumber;
 @synthesize studentEmail;
-
+@synthesize studentImageName;
 
 @synthesize studentImage;
 @synthesize studentNameLabel;
 @synthesize studentMajorLabel;
 @synthesize studentBioTextview;
 
-
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+ 
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     
+    self.navigationItem.title = @"SDA";
+
     studentNameLabel.text = studentName;
     studentMajorLabel.text = studentMajor;
     studentBioTextview.text = studentBio;
     
-    NSLog(@"Phone number:", studentPhoneNumber);
+    UIImage *img = [UIImage imageNamed:studentImageName];
+    
+    UIImage *scaledimage = [self imageWithImage:img];
     
     
+
+    [studentImage sizeToFit];
+    [studentImage setImage:scaledimage];
     
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+//    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     studentBioTextview.layer.borderColor = [UIColor grayColor].CGColor;
     studentBioTextview.layer.borderWidth = 0.25;
@@ -52,8 +61,30 @@
     
 }
 
+-(void)viewDidLayoutSubviews{
+    studentImage.layer.cornerRadius = studentImage.frame.size.width / 2.0;
+    studentImage.layer.masksToBounds = YES;
+    studentImage.clipsToBounds = YES;
+    
+}
+
+
+-(UIImage *)imageWithImage:(UIImage *)image  {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(134, 134), NO, 0.0);
+    // Here pass new size you need
+    [image drawInRect:CGRectMake(0, 0, 134, 134)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 - (IBAction)callButton:(id)sender {
-    UIButton *button = (UIButton*)sender;
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"SDA Detail View" properties:@{
+                                                    @"SDA Called": studentName
+                                                    }];
     NSString *promptprefix = @"tel://";
     
     NSMutableString *strippedString = [NSMutableString stringWithCapacity:10];
@@ -68,6 +99,11 @@
 
 }
 - (IBAction)emailButton:(id)sender {
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"SDA Detail View" properties:@{
+                                                    @"SDA Emailed": studentName
+                                                    }];
     
     
     NSArray *toRecipents = [NSArray arrayWithObject:studentEmail];
@@ -107,6 +143,11 @@
 
 - (IBAction)textButton:(id)sender {
     
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"SDA Detail View" properties:@{
+                                                    @"SDA Texted": studentName
+                                                    }];
+    
     [self showSMS:studentPhoneNumber];
 }
 
@@ -124,8 +165,11 @@
     messageController.messageComposeDelegate = self;
     [messageController setRecipients:recipents];
     
+    UIImage *backgroundImage = [UIImage imageNamed:@"Navigation Bar"];
+    [[UINavigationBar appearance] setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    
     // Present message view controller on screen
-    [self presentViewController:messageController animated:YES completion:nil];
+    [self.navigationController presentViewController:messageController animated:YES completion:nil];
 }
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result

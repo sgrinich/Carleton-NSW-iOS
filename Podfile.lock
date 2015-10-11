@@ -1,16 +1,21 @@
 PODS:
   - AMScrollingNavbar (1.0.1)
   - iToast (0.0.1)
+  - Mixpanel (2.8.2):
+    - Mixpanel/Mixpanel (= 2.8.2)
+  - Mixpanel/Mixpanel (2.8.2)
   - VCTransitionsLibrary (1.4.0)
 
 DEPENDENCIES:
   - AMScrollingNavbar (~> 1.0)
   - iToast
+  - Mixpanel
   - VCTransitionsLibrary (~> 1.4.0)
 
 SPEC CHECKSUMS:
   AMScrollingNavbar: 66ef9b8d08da982b59bdfc39538ba401ec13b1c3
   iToast: 4de112d3dd42a3a8bf685572e6cda723c9cbc4f2
+  Mixpanel: f4d71ac2a306e7cda6ad03d4a2be249a0fd7a967
   VCTransitionsLibrary: 7116e731880e745e4c92993daba587b7c48c18e0
 
 COCOAPODS: 0.38.0

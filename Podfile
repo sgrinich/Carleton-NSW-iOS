@@ -3,3 +3,4 @@
 pod 'VCTransitionsLibrary', '~> 1.4.0'
 pod 'iToast'
 pod 'AMScrollingNavbar', '~> 1.0'
+pod 'Mixpanel'

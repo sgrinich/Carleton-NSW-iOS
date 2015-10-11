@@ -12,11 +12,35 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "NSWConstants.h"
 #import "SWRevealViewController.h"
+#import "Mixpanel.h"
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    
+    if (notification) {
+        [self showAlarm:notification.alertBody];
+        application.applicationIconBadgeNumber = 0;
+    }
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    #define MIXPANEL_TOKEN @"73b58638e0979d38f294665a2997ef82"
+
+    // Initialize the library with your
+    // Mixpanel project token, MIXPANEL_TOKEN
+    [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+    
+    // Later, you can get your instance with
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    
+  
+    
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Initialize the downloader singleton and ensure there aren't any pending downloads 
@@ -34,9 +58,8 @@
     // Initialize the singleton downloader
     [FLDownloader sharedDownloader];
     
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
+   // [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    //[[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     
     return YES;
@@ -73,20 +96,38 @@
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    UIApplicationState state = [application applicationState];
-    if (state == UIApplicationStateActive) {
+    [self showAlarm:notification.alertBody];
+    application.applicationIconBadgeNumber = 0;
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if( buttonIndex == 1 ) /* NO = 0, Sign Up = 1 */
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://apps.carleton.edu/campus/ira/cla/"]];
+    }
+}
+
+- (void)showAlarm:(NSString *)text {
+
+    
+    if([text rangeOfString:@"Have you signed up yet for the CLA+ exam?  90 minutes; $35; a chance to compare your reason"].location == NSNotFound){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NSW"
-                                                        message:notification.alertBody
+                                                        message:text
                                                        delegate:self cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
     }
     
-    // Request to reload table view data
-    //[[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NSW"
+                                                        message:text
+                                                       delegate:self cancelButtonTitle:@"No thanks"
+                                              otherButtonTitles:@"Sign Up",nil];
+        [alert show];
+    }
+
     
-    // Set icon badge number to zero
-    application.applicationIconBadgeNumber = 0;
 }
 
 

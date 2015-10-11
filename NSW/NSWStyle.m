@@ -31,6 +31,19 @@
     return [UIColor colorWithRed:102.0f/255.0f green:102.0f/255.0f blue:102.0f/255.0f alpha:1.0];
 }
 
++ (UIColor *)midnightBlue {
+    return [UIColor colorWithRed:1.0f/255.0f green:16.0f/255.0f blue:28.0f/255.0f alpha:1.0];
+}
+
++ (UIColor *)brownColor {
+    return [UIColor colorWithRed:126.0f/255.0f green:130.0f/255.0f blue:134.0f/255.0f alpha:1.0];
+}
+
++ (UIColor *)selectedColor {
+    return [UIColor colorWithRed:43.0f/255.0f green:56.0f/255.0f blue:65.0f/255.0f alpha:1.0];
+}
+
+
 
 + (UIColor *)whiteColor {
     return [UIColor whiteColor];

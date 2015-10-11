@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EventTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *startEndLabel;
-@property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
-
+@property (strong, nonatomic) UILabel* eventTimeLabel;
+@property (strong, nonatomic) UILabel* eventNameLabel; 
 @end

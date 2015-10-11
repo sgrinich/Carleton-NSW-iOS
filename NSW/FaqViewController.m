@@ -15,10 +15,12 @@
 #import "FaqDetailViewController.h"
 #import "UIViewController+ScrollingNavbar.h"
 #import "SWRevealViewController.h"
+#import "Mixpanel.h"
 
 @interface FaqViewController (){
     /* Sections are in this order and include:
      -- NewStudents
+     -- Registration
      -- Housing
      -- OneCard
      -- PostOffice
@@ -39,6 +41,7 @@
 @implementation FaqViewController
 
 @synthesize studentsSection = _studentsSection;
+@synthesize registrationSection = _registrationSection;
 @synthesize housingSection  = _housingSection;
 @synthesize oneCardSection = _oneCardSection;
 @synthesize postOfficeSection = _postOfficeSection;
@@ -63,15 +66,23 @@
 
 int selectedIndex;
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.navigationItem.title = @"FAQ";
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [NSWStyle oceanBlueColor];
+    [self.tableView setBackgroundView:view];
     
     //Connect this VC to the shared DataSource
     [[[DataSourceManager sharedDSManager] getFaqDataSource] attachVCBackref:self];
     
-    [self followScrollView:self.tableView];
+    //[self followScrollView:self.tableView];
+    
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     
     SWRevealViewController *revealViewController = self.revealViewController;
 
@@ -100,83 +111,83 @@ int selectedIndex;
 
 
 
-- (BOOL)scrollViewShouldScrollToTop {
-    [self showNavbar];
-    return YES;
+//- (BOOL)scrollViewShouldScrollToTop {
+//    [self showNavbar];
+//    return YES;
+//
+//}
 
-}
-
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
-     if([self isRowZeroVisible]){
-            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
-            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
-            frameAdjustedToPreventOffset.origin.y = 0;
-            self.tableView.frame = frameAdjustedToPreventOffset;
-        }
-}
+//-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    
+//     if([self isRowZeroVisible]){
+//            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
+//            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
+//            frameAdjustedToPreventOffset.origin.y = 0;
+//            self.tableView.frame = frameAdjustedToPreventOffset;
+//        }
+//}
 
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    scrollView.bounces = NO;
-
-    // Prevent the AMScrollingNavbar from creating a black gap the first time the feed is scrolled.
-    
-    if([self isRowZeroVisible]){
-        if (scrollView.contentOffset.y > 0
-            && CGRectGetMinY(self.tableView.frame) != 0) {
-            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
-            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
-            frameAdjustedToPreventOffset.origin.y = 0;
-            self.tableView.frame = frameAdjustedToPreventOffset;
-        }
-        if (scrollView.contentOffset.y < 0
-            && CGRectGetMinY(self.tableView.frame) != 0) {
-            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
-            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
-            frameAdjustedToPreventOffset.origin.y = 0;
-            self.tableView.frame = frameAdjustedToPreventOffset;
-        }
-    }
-    
-    else{
-        if (scrollView.contentOffset.y > 0
-            && CGRectGetMinY(self.tableView.frame) != 0) {
-            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
-            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
-            frameAdjustedToPreventOffset.origin.y = 0;
-            self.tableView.frame = frameAdjustedToPreventOffset;
-        }
-        
-        if (scrollView.contentOffset.y < 0
-            && CGRectGetMinY(self.tableView.frame) != 0) {
-            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
-            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
-            frameAdjustedToPreventOffset.origin.y = 0;
-            self.tableView.frame = frameAdjustedToPreventOffset;
-        }
-        
-    }
-    
-    
-}
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    scrollView.bounces = NO;
+//
+//    // Prevent the AMScrollingNavbar from creating a black gap the first time the feed is scrolled.
+//    
+//    if([self isRowZeroVisible]){
+//        if (scrollView.contentOffset.y > 0
+//            && CGRectGetMinY(self.tableView.frame) != 0) {
+//            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
+//            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
+//            frameAdjustedToPreventOffset.origin.y = 0;
+//            self.tableView.frame = frameAdjustedToPreventOffset;
+//        }
+//        if (scrollView.contentOffset.y < 0
+//            && CGRectGetMinY(self.tableView.frame) != 0) {
+//            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
+//            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
+//            frameAdjustedToPreventOffset.origin.y = 0;
+//            self.tableView.frame = frameAdjustedToPreventOffset;
+//        }
+//    }
+//    
+//    else{
+//        if (scrollView.contentOffset.y > 0
+//            && CGRectGetMinY(self.tableView.frame) != 0) {
+//            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
+//            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
+//            frameAdjustedToPreventOffset.origin.y = 0;
+//            self.tableView.frame = frameAdjustedToPreventOffset;
+//        }
+//        
+//        if (scrollView.contentOffset.y < 0
+//            && CGRectGetMinY(self.tableView.frame) != 0) {
+//            CGRect frameAdjustedToPreventOffset = self.tableView.frame;
+//            frameAdjustedToPreventOffset.size.height += frameAdjustedToPreventOffset.origin.y;
+//            frameAdjustedToPreventOffset.origin.y = 0;
+//            self.tableView.frame = frameAdjustedToPreventOffset;
+//        }
+//        
+//    }
+//    
+//    
+//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Do some stuff when the row is selected
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
--(BOOL)isRowZeroVisible {
-    NSArray *indexes = [self.tableView indexPathsForVisibleRows];
-    for (NSIndexPath *index in indexes) {
-        if (index.row == 0) {
-            return YES;
-        }
-    }
-    
-    return NO;
-}
+//
+//-(BOOL)isRowZeroVisible {
+//    NSArray *indexes = [self.tableView indexPathsForVisibleRows];
+//    for (NSIndexPath *index in indexes) {
+//        if (index.row == 0) {
+//            return YES;
+//        }
+//    }
+//    
+//    return NO;
+//}
 
 - (FaqTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -191,38 +202,42 @@ int selectedIndex;
             break;
             
         case 1:
-            cell.questionLabel.text = [[_housingSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_registrationSection objectAtIndex:indexPath.row]question];
             break;
             
         case 2:
-            cell.questionLabel.text = [[_oneCardSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_housingSection objectAtIndex:indexPath.row] question];
             break;
             
         case 3:
-            cell.questionLabel.text = [[_postOfficeSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_oneCardSection objectAtIndex:indexPath.row] question];
             break;
             
         case 4:
-            cell.questionLabel.text = [[_shacSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_postOfficeSection objectAtIndex:indexPath.row] question];
             break;
             
         case 5:
-            cell.questionLabel.text = [[_advisingSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_shacSection objectAtIndex:indexPath.row] question];
             break;
             
         case 6:
-            cell.questionLabel.text = [[_itsSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_advisingSection objectAtIndex:indexPath.row] question];
             break;
             
         case 7:
-            cell.questionLabel.text = [[_languageSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_itsSection objectAtIndex:indexPath.row] question];
             break;
             
         case 8:
-            cell.questionLabel.text = [[_printServicesSection objectAtIndex:indexPath.row] question];
+            cell.questionLabel.text = [[_languageSection objectAtIndex:indexPath.row] question];
             break;
             
         case 9:
+            cell.questionLabel.text = [[_printServicesSection objectAtIndex:indexPath.row] question];
+            break;
+            
+        case 10:
             cell.questionLabel.text = [[_disabilityServiceSection objectAtIndex:indexPath.row] question];
             break;
             
@@ -239,12 +254,13 @@ int selectedIndex;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 10;
+    return 12;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     _studentsSection = [NSMutableArray array];
+    _registrationSection = [NSMutableArray array];
     _housingSection = [NSMutableArray array];
     _oneCardSection = [NSMutableArray array];
     _postOfficeSection = [NSMutableArray array];
@@ -261,7 +277,10 @@ int selectedIndex;
         
         if([[item section] isEqualToString:@"NewStudents"]){
             [_studentsSection addObject:item];
-            
+        }
+        
+        else if ([[item section]isEqualToString:@"Registration"]){
+            [_registrationSection addObject:item];
         }
         
         else if([[item section] isEqualToString:@"Housing"]){
@@ -310,40 +329,43 @@ int selectedIndex;
         case 0:
             count = [_studentsSection count];
             break;
-            
         case 1:
-            count = [_housingSection count];
+            count = [_registrationSection count];
             break;
             
         case 2:
+            count = [_housingSection count];
+            break;
+            
+        case 3:
             count = [_oneCardSection count];
             break;
         
-        case 3:
+        case 4:
             count = [_postOfficeSection count];
             break;
         
-        case 4:
+        case 5:
             count = [_shacSection count];
             break;
             
-        case 5:
+        case 6:
             count = [_advisingSection count];
             break;
         
-        case 6:
+        case 7:
             count = [_itsSection count];
             break;
             
-        case 7:
+        case 8:
             count = [_languageSection count];
             break;
             
-        case 8:
+        case 9:
             count = [_printServicesSection count];
             break;
         
-        case 9:
+        case 10:
             count = [_disabilityServiceSection count];
             break;
         
@@ -391,30 +413,33 @@ int selectedIndex;
             title = @"General";
             break;
         case 1:
-            title = @"Housing";
+            title = @"Registration";
             break;
         case 2:
-            title = @"OneCard";
+            title = @"Housing";
             break;
         case 3:
-            title = @"Post Office";
+            title = @"OneCard";
             break;
         case 4:
-            title = @"Student Health";
+            title = @"Post Office";
             break;
         case 5:
-            title = @"Advising";
+            title = @"Student Health";
             break;
         case 6:
-            title = @"ITS";
+            title = @"Advising";
             break;
         case 7:
-            title = @"Language Placement";
+            title = @"ITS";
             break;
         case 8:
-            title = @"Print Services";
+            title = @"Language Placement";
             break;
         case 9:
+            title = @"Print Services";
+            break;
+        case 10:
             title = @"Disability Services";
             break;
        /* case 10:
@@ -446,55 +471,119 @@ int selectedIndex;
     NSString *sectionAnswer;
     
     
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    
+    
     switch (indexPath.section) {
         case 0:
             sectionQuestion = [[_studentsSection objectAtIndex:indexPath.row] question];
             sectionAnswer = [[_studentsSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                               @"FAQ Section": @"General",
+                                                               @"Question":sectionQuestion
+                                                               }];
             break;
             
         case 1:
-            sectionQuestion = [[_housingSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_housingSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_registrationSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_registrationSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Registration",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 2:
-            sectionQuestion = [[_oneCardSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_oneCardSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_housingSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_housingSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Housing",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
+            
         case 3:
-            sectionQuestion = [[_postOfficeSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_postOfficeSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_oneCardSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_oneCardSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"OneCard",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 4:
-            sectionQuestion = [[_shacSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_shacSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_postOfficeSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_postOfficeSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Post Office",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 5:
-            sectionQuestion = [[_advisingSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_advisingSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_shacSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_shacSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"SHAC",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 6:
-            sectionQuestion = [[_itsSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_itsSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_advisingSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_advisingSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Advising",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 7:
-            sectionQuestion = [[_languageSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_languageSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_itsSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_itsSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"ITS",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 8:
-            sectionQuestion = [[_printServicesSection objectAtIndex:indexPath.row] question];
-            sectionAnswer = [[_printServicesSection objectAtIndex:indexPath.row] answer];
+            sectionQuestion = [[_languageSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_languageSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Language",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
         case 9:
+            sectionQuestion = [[_printServicesSection objectAtIndex:indexPath.row] question];
+            sectionAnswer = [[_printServicesSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Print Services",
+                                                            @"Question":sectionQuestion
+                                                            }];
+            break;
+            
+        case 10:
             sectionQuestion = [[_disabilityServiceSection  objectAtIndex:indexPath.row] question];
             sectionAnswer = [[_disabilityServiceSection objectAtIndex:indexPath.row] answer];
+            
+            [mixpanel track:@"FAQ Information" properties:@{
+                                                            @"FAQ Section": @"Disability Services",
+                                                            @"Question":sectionQuestion
+                                                            }];
             break;
             
        /* case 10:
@@ -509,9 +598,10 @@ int selectedIndex;
     
     if ([[segue identifier] isEqualToString:@"showAnswerDetail"]) {
         
-        
         destFaqViewController.question = sectionQuestion;
         destFaqViewController.answer = sectionAnswer;
+        
+        
         
     }
 }

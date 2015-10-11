@@ -7,11 +7,29 @@
 //
 
 #import "BaseNSWTableViewController.h"
+#import "NSWEvent.h"
 
-@interface DayViewController : BaseNSWTableViewController{
+
+@protocol DayViewControllerDelegate;
+
+@interface DayViewController : UITableViewController{
     NSString* day;
 }
 
-- (id)initWithDay:(NSString *)day;
+
+@property NSMutableArray *listItems;
+
+-(void)setVCArrayToDataSourceArray:(NSArray *)dataSourceEventList;
+- (id)initWithDate:(NSDate *)date;
+-(void)getEventsFromCurrentDate;
+
+@property (nonatomic, weak) id <DayViewControllerDelegate> delegate;
+
 
 @end
+
+@protocol DayViewControllerDelegate <NSObject>
+- (void)addItemViewController:(DayViewController *)controller didFinishEnteringItem:(NSWEvent *)event;
+@end
+
+

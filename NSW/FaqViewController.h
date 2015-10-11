@@ -13,6 +13,7 @@
 
 @interface FaqViewController : BaseNSWTableViewController {
     NSMutableArray *studentsSection;
+    NSMutableArray *registrationSection; 
     NSMutableArray *housingSection;
     NSMutableArray *oneCardSection;
     NSMutableArray *postOfficeSection;
@@ -26,6 +27,7 @@
 }
 
 @property (retain, atomic) NSMutableArray *studentsSection;
+@property (retain, atomic) NSMutableArray *registrationSection;
 @property (retain, atomic) NSMutableArray *housingSection;
 @property (retain, atomic) NSMutableArray *oneCardSection;
 @property (retain, atomic) NSMutableArray *postOfficeSection;

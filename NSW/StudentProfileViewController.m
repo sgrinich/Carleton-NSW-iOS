@@ -15,6 +15,8 @@
 #import "StudentProfileDataSource.h"
 #import "NSWStyle.h"
 #import "StudentProfileDetailViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "Mixpanel.h"
 
 @interface StudentProfileViewController ()
 
@@ -22,7 +24,9 @@
 
 @implementation StudentProfileViewController
 
-
+@synthesize cellIconNames;
+@synthesize imageName;
+@synthesize fileName;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,8 +39,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[[DataSourceManager sharedDSManager] getStudentProfileDataSource] attachVCBackref:self];
+
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [NSWStyle oceanBlueColor];
+    [self.tableView setBackgroundView:view];
     
-    self.navigationItem.title = @"Student Profiles";
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    
+    
+    for(int i=0;i<[self.listItems count];i++){
+        imageName = [NSString stringWithFormat:@"%@.jpg", [self.listItems[i] name]];
+//        NSLog(@"imagename: %@", imageName);
+        
+        [cellIconNames addObject:imageName];
+    }
+    
+    self.navigationItem.title = @"SDAs";
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -49,7 +69,6 @@
     [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
 
 
-    [[[DataSourceManager sharedDSManager] getStudentProfileDataSource] attachVCBackref:self];
     
 
 }
@@ -80,12 +99,46 @@
     StudentProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     StudentSpecialist *student = self.listItems[(NSUInteger) indexPath.row];
     cell.studentNameLabel.text = [student name];
-    cell.studentMajorLabel.text = [student major];
-
+//    cell.studentNameLabel.adjustsFontSizeToFitWidth = YES;
+//    cell.studentNameLabel.minimumFontSize = 0;
+//    
     
+    cell.studentMajorLabel.text = [student major];
+//    cell.studentMajorLabel.adjustsFontSizeToFitWidth = YES;
+//    cell.studentMajorLabel.minimumFontSize = 0;
+
+    imageName = [NSString stringWithFormat:@"%@.jpg", [self.listItems[indexPath.row] name]];
+    fileName = [imageName stringByReplacingOccurrencesOfString:@" " withString:@""];
+
+    UIImage *img = [UIImage imageNamed:fileName];
+    
+    UIImage *scaledimage = [self imageWithImage:img];
+    
+    cell.studentImageView.layer.cornerRadius = 40;
+    cell.studentImageView.layer.masksToBounds = YES;
+    [cell.studentImageView sizeToFit];
+    [cell.studentImageView setImage:scaledimage];
+
     
     return cell;
 }
+
+-(UIImage *)imageWithImage:(UIImage *)image  {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(80, 80), NO, 0.0);
+    // Here pass new size you need
+    [image drawInRect:CGRectMake(0, 0, 80, 80)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    cell.imageView.frame = (CGRect){{0.0f, 0.0f}, 80, 80};
+//    cell.imageView.layer.masksToBounds = YES;
+//    cell.imageView.layer.cornerRadius = 50;
+//}
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -95,17 +148,32 @@
     StudentSpecialist *student = self.listItems[(NSUInteger) indexPath.row];
     StudentProfileDetailViewController *destViewController = segue.destinationViewController;
     
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+
+
+    
     if ([[segue identifier] isEqualToString:@"showProfileDetail"]) {
+        
+        [mixpanel track:@"SDAs View Controller" properties:@{
+                                                             @"SDA Name": [student name]
+                                                          }];
         
         destViewController.studentName = [student name];
         destViewController.studentMajor = [student major];
         destViewController.studentBio = [student bio];
         destViewController.studentPhoneNumber = [student number];
-        destViewController.studentEmail = [student email]; 
+        destViewController.studentEmail = [student email];
+        
+        imageName = [NSString stringWithFormat:@"%@.jpg", [self.listItems[indexPath.row] name]];
+        fileName = [imageName stringByReplacingOccurrencesOfString:@" " withString:@""];
+        
+        destViewController.studentImageName = fileName;
         
         
     }
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {

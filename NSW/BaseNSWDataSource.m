@@ -6,6 +6,7 @@
 #import "BaseNSWDataSource.h"
 #import "FLDownloader.h"
 #import "EventListViewController.h"
+#import "DayViewController.h"
 
 @interface BaseNSWDataSource ()
 @property (nonatomic, strong) NSDictionary *urlMap;
@@ -22,12 +23,13 @@ static BOOL dataIsReady;
 // Maps what URL corresponds to which local file name
 - (id)urlMap {
     if (!_urlMap) {
-        NSArray *fileNames = @[@"events.ics", @"contacts.html", @"terms.json", @"faq.html"];
+        NSArray *fileNames = @[@"events.ics", @"contacts.html", @"terms.json", @"faq.html",@"StudentProfiles.txt"];
         
         NSArray *urls = @[[NSURL URLWithString:@"https://apps.carleton.edu/newstudents/events/?start_date=2015-08-05&format=ical"],
                 [NSURL URLWithString:@"https://apps.carleton.edu/newstudents/contact/"],
                 [NSURL URLWithString:@"http://sgrinich.github.io/speak_carleton.json"],
-                [NSURL URLWithString:@"http://apps.carleton.edu/newstudents/contact/faq/#site_index"]];
+                [NSURL URLWithString:@"http://apps.carleton.edu/newstudents/contact/faq/#site_index"],
+                [NSURL URLWithString:@"http://sgrinich.github.io/StudentProfiles.txt"]];
         
         _urlMap = [NSDictionary dictionaryWithObjects:urls forKeys:fileNames];
         if (_urlMap.count != urls.count) {
@@ -65,6 +67,24 @@ static BOOL dataIsReady;
         // EventListViewController only wants the list for today
         if ([tableViewController isKindOfClass:[EventListViewController class]]) {
             [(EventListViewController *) myTableViewController getEventsFromCurrentDate];
+        } else {
+            [myTableViewController setVCArrayToDataSourceArray:self.dataList];
+        }
+    } else {
+        NSLog(@"Data is still being retrieved.");
+    }
+}
+
+// Attaches a TableViewController to send the data to once it has been loaded
+- (void)attachDayVCBackref:(DayViewController *)tableViewController {
+    myDayViewController = tableViewController;
+    
+    // If data is ready, send it to tableViewController. Otherwise the data is still
+    // being retrieved and will be sent when it's ready.
+    if (dataIsReady) {
+        // EventListViewController only wants the list for today
+        if ([tableViewController isKindOfClass:[DayViewController class]]) {
+            [(DayViewController *) myTableViewController getEventsFromCurrentDate];
         } else {
             [myTableViewController setVCArrayToDataSourceArray:self.dataList];
         }

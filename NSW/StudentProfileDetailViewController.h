@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *studentBio;
 @property (nonatomic, strong) NSString *studentPhoneNumber;
 @property (nonatomic, strong) NSString *studentEmail;
+@property (nonatomic, strong) NSString *studentImageName;
 
 @property (weak, nonatomic) IBOutlet UIImageView *studentImage;
 @property (weak, nonatomic) IBOutlet UILabel *studentNameLabel;

@@ -39,7 +39,9 @@
     [super viewDidLoad];
 
     questionLabel.text = question;
-    answerTextView.text = answer; 
+    answerTextView.text = answer;
+    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     answerTextView.layer.borderColor = [UIColor grayColor].CGColor;
     answerTextView.layer.borderWidth = 0.25;

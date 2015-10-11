@@ -10,6 +10,9 @@
 #import "LocationTableViewCell.h"
 #import "MapLocation.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "Mixpanel.h"
+#import <CoreLocation/CoreLocation.h>
+#import "NSWStyle.h"
 
 
 @interface MapLocationsTableViewController ()
@@ -34,15 +37,18 @@
 {
     [super viewDidLoad];
     
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [NSWStyle oceanBlueColor];
+    [self.tableView setBackgroundView:view];
   
     _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
     _locationManager.distanceFilter = kCLDistanceFilterNone;
-    _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-    
-    
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [_locationManager startUpdatingLocation];
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -643,8 +649,12 @@
     MapLocation *selectedLocation = [_locationsList objectAtIndex:[indexPath row]];
     
    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Map Location Choice" properties:@{
+                                                      @"Location Name": [selectedLocation maplocation]
+                                                      }];
+
     [self.delegate addItemViewController:self didFinishEnteringItem:selectedLocation];
-    
     [self dismissModalViewControllerAnimated:YES];
 }
     

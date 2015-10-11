@@ -19,14 +19,14 @@
 @end
 
 
-@interface MapLocationsTableViewController : UITableViewController{
+@interface MapLocationsTableViewController : UITableViewController <CLLocationManagerDelegate>{
     NSMutableArray *locationsList;
 
 }
 
 @property (retain, atomic) NSMutableArray *locationsList;
 @property (nonatomic, weak) id <MapLocationsTableViewControllerDelegate> delegate;
-@property(nonatomic,retain) CLLocationManager *locationManager;
+@property(nonatomic,strong) CLLocationManager *locationManager;
 
 
 @end

@@ -17,6 +17,10 @@
 + (UIColor *)whiteColor;
 + (UIColor *)oceanBlueColor;
 + (UIColor *)darkGrayColor;
++ (UIColor *)midnightBlue;
++ (UIColor *)brownColor;
++ (UIColor *)selectedColor;
+
 
 + (UIFont *)basicFont;
 + (UIFont *)boldFont;

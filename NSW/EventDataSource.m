@@ -60,7 +60,7 @@
     NSDateComponents *currentDateComps = [NSWEvent getDateComponentsFromDate:currentDate];
     NSString *predicateFormat = [NSString stringWithFormat: @"startDateComponents.day = %i && startDateComponents.month == %i && startDateComponents.year == %i",
                     currentDateComps.day, currentDateComps.month, currentDateComps.year];
-    NSLog(@"%@", currentDateComps);
+    NSLog(@"Current Date Comps: %@", currentDateComps);
     NSPredicate *dateMatchesCurrent = [NSComparisonPredicate predicateWithFormat:predicateFormat];
     NSArray *todaysEvents = [fullEventList filteredArrayUsingPredicate:dateMatchesCurrent];
 
@@ -72,9 +72,7 @@
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"startDateTime"
                                                  ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
-    
     NSArray *sortedEvents = [unsortedEvents sortedArrayUsingDescriptors:sortDescriptors];
-
     return sortedEvents;
 }
 
@@ -131,10 +129,7 @@ example ICS event:
     
     // get summary
     NSMutableString *title_ = [[self parseSimpleICSAttribute:lines[2]] mutableCopy];
-    
-    
     NSMutableString *desc_ = [@"" mutableCopy];
-
     NSString *loc_;
     NSDate *start_;
     NSTimeInterval dur_ = 0;
@@ -255,7 +250,7 @@ example ICS event:
 // Most of the attributes are of the form "ATTRIBUTENAME:data-we-care-about"
 - (NSString *)parseSimpleICSAttribute:(NSString *) fullLine{
     NSMutableArray *lineComponents = (NSMutableArray *) [fullLine componentsSeparatedByString:@":"];
-    NSLog(@"%@",lineComponents);
+    NSLog(@"Line components: %@",lineComponents);
 
     if (lineComponents.count == 2){
         return lineComponents[1];
@@ -282,6 +277,7 @@ example ICS event:
 
     // Convert raw string to an NSDate.
     NSDate *convertedDate = [dateFormatter dateFromString:rawStartDateTime];
+    NSLog(@"Current date: %@", convertedDate);
     return convertedDate;
 }
 

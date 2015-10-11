@@ -5,10 +5,12 @@
 
 #import <Foundation/Foundation.h>
 #import "BaseNSWTableViewController.h"
+#import "DayViewController.h"
 
 
 @interface BaseNSWDataSource : NSObject {
     __weak BaseNSWTableViewController *myTableViewController;
+    __weak DayViewController *myDayViewController;
 }
 // the time that the download started
 @property (nonatomic, strong) NSDate *downloadStarted;
